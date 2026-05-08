@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi"; 
-import { cn } from "@/lib/utils"; 
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
+import { cn } from "@/lib/utils";
 
 const techStack = [
   { name: "React", color: "text-blue-400", gradient: "from-blue-500/20 to-blue-600/5" },
@@ -65,46 +65,25 @@ const socialVariants = {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-[#0a0a0a] flex items-center pt-20 overflow-hidden">
-      {/* Animated Grid Background */}
+    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-linear-to-br from-black via-slate-950 to-blue-950">
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.15 }}
-        transition={{ duration: 1 }}
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: 'linear-gradient(#22c55e 1px, transparent 1px), linear-gradient(90deg, #22c55e 1px, transparent 1px)',
-          backgroundSize: '40px 40px'
-        }}
-      />
-
-      {/* Gradient Orbs */}
-      <motion.div
-        animate={{
-          x: [0, 50, 0],
-          y: [0, 50, 0],
-        }}
-        transition={{ duration: 8, repeat: Infinity, repeatType: "reverse" }}
-        className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/20 rounded-full blur-[120px] -z-5"
+        animate={{ x: [0, 100, 0], y: [0, 50, 0] }}
+        transition={{ duration: 12, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+        className="absolute top-1/4 -left-1/4 w-125 h-125 bg-linear-to-r from-emerald-500/40 to-green-600/20 rounded-full blur-[150px] -z-5"
       />
       <motion.div
-        animate={{
-          x: [0, -50, 0],
-          y: [0, -50, 0],
-        }}
-        transition={{ duration: 10, repeat: Infinity, repeatType: "reverse" }}
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[120px] -z-5"
+        animate={{ x: [0, -100, 0], y: [0, -50, 0] }}
+        transition={{ duration: 14, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+        className="absolute bottom-1/4 -right-1/4 w-125 h-125 bg-linear-to-l from-blue-600/40 to-purple-500/30 rounded-full blur-[150px] -z-5"
+      />
+      <motion.div
+        animate={{ x: [0, 50, -50, 0], y: [0, -50, 50, 0] }}
+        transition={{ duration: 16, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
+        className="absolute top-1/2 right-1/3 w-100 h-100 bg-linear-to-b from-cyan-500/20 to-blue-500/10 rounded-full blur-[120px] -z-5"
       />
 
       <div className="container mx-auto px-6 lg:px-20 z-10 grid md:grid-cols-2 gap-12 items-center">
-        
-        {/* Left Content */}
-        <motion.div
-          variants={containerVariants}
-          initial="initial"
-          animate="animate"
-        >
-          {/* Status Badge */}
+        <motion.div variants={containerVariants} initial="initial" animate="animate">
           <motion.div
             variants={itemVariants}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/40 text-green-400 text-xs mb-6 hover:bg-green-500/15 transition-all cursor-pointer"
@@ -117,7 +96,6 @@ export default function Hero() {
             Available for New Opportunities
           </motion.div>
 
-          {/* Main Title */}
           <motion.div variants={itemVariants} className="overflow-hidden">
             <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <motion.span
@@ -133,14 +111,13 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8, type: "spring" }}
-                className="inline-block bg-gradient-to-r from-green-400 to-emerald-600 text-transparent bg-clip-text"
+                className="inline-block bg-linear-to-r from-green-400 to-emerald-600 text-transparent bg-clip-text"
               >
                 Ahamed
               </motion.span>
             </h1>
           </motion.div>
 
-          {/* Description */}
           <motion.p
             variants={itemVariants}
             className="text-lg lg:text-xl text-gray-300 mb-8 max-w-lg leading-relaxed"
@@ -148,11 +125,7 @@ export default function Hero() {
             Building Scalable and Responsive Web Applications with Modern Technologies.
           </motion.p>
 
-          {/* Tech Stack */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-wrap gap-3 mb-10"
-          >
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-3 mb-10">
             {techStack.map((tech, i) => (
               <motion.span
                 key={tech.name}
@@ -162,7 +135,7 @@ export default function Hero() {
                 transition={{ delay: 0.4 + i * 0.05, duration: 0.5 }}
                 whileHover={{ scale: 1.1, y: -5 }}
                 className={cn(
-                  `px-4 py-2 rounded-lg bg-gradient-to-br ${tech.gradient} border border-white/10 text-sm font-medium ${tech.color} hover:border-white/30 transition-all cursor-pointer`
+                  `px-4 py-2 rounded-lg bg-linear-to-br ${tech.gradient} border border-white/10 text-sm font-medium ${tech.color} hover:border-white/30 transition-all cursor-pointer`
                 )}
               >
                 {tech.name}
@@ -170,15 +143,11 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* CTA Buttons */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center gap-4 mb-12"
-          >
+          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4 mb-12">
             <motion.button
               whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(34, 197, 94, 0.5)" }}
               whileTap={{ scale: 0.95 }}
-              className="w-full sm:w-auto bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
+              className="w-full sm:w-auto bg-linear-to-r from-green-500 to-emerald-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all"
             >
               View Projects
             </motion.button>
@@ -191,23 +160,19 @@ export default function Hero() {
             </motion.button>
           </motion.div>
 
-          {/* Social Icons */}
-          <motion.div
-            variants={itemVariants}
-            className="flex gap-4"
-          >
+          <motion.div variants={itemVariants} className="flex gap-4">
             {[
               { Icon: FiGithub, href: "#" },
               { Icon: FiLinkedin, href: "#" },
               { Icon: FiMail, href: "#" },
-            ].map(({ Icon }, i) => (
+            ].map(({ Icon, href }, i) => (
               <motion.a
-                key={i}
+                key={href + i}
                 custom={i}
                 variants={socialVariants}
                 initial="initial"
                 animate="animate"
-                href="#"
+                href={href}
                 whileHover={{
                   scale: 1.15,
                   backgroundColor: "rgba(34, 197, 94, 0.2)",
@@ -222,7 +187,6 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right Content - Profile Image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.5, rotate: -10 }}
           animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -235,26 +199,20 @@ export default function Hero() {
             animate="animate"
             className="relative w-72 h-72 lg:w-96 lg:h-96"
           >
-            {/* Animated Glow */}
             <motion.div
-              animate={{
-                scale: [1, 1.1, 1],
-                opacity: [0.5, 1, 0.5],
-              }}
+              animate={{ scale: [1, 1.1, 1], opacity: [0.5, 1, 0.5] }}
               transition={{ duration: 3, repeat: Infinity }}
-              className="absolute inset-0 bg-gradient-to-r from-green-500/30 to-emerald-600/30 rounded-full blur-[80px]"
+              className="absolute inset-0 bg-linear-to-r from-green-500/30 to-emerald-600/30 rounded-full blur-[80px]"
             />
 
-            {/* Rotating Border */}
             <motion.div
               animate={{ rotate: 360 }}
               transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
-              className="absolute inset-0 rounded-full border-2 border-transparent bg-gradient-to-r from-green-500 to-emerald-600 bg-clip-border p-[2px]"
+              className="absolute inset-0 rounded-full border-2 border-transparent bg-linear-to-r from-green-500 to-emerald-600 bg-clip-border p-0.5"
             >
               <div className="absolute inset-0 bg-[#0a0a0a] rounded-full" />
             </motion.div>
 
-            {/* Profile Image */}
             <motion.div
               className="relative w-full h-full rounded-full overflow-hidden border-4 border-green-500/40 p-1"
               whileHover={{ borderColor: "rgba(34, 197, 94, 0.8)" }}
@@ -269,7 +227,6 @@ export default function Hero() {
               />
             </motion.div>
 
-            {/* Corner Accents */}
             {[
               { top: 0, left: 0, rotate: 0 },
               { top: 0, right: 0, rotate: 90 },
