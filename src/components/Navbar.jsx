@@ -37,7 +37,7 @@ export default function Navbar() {
 
   return (
     <nav className={cn(
-      "fixed top-0 w-full z-50 transition-all duration-500 px-6 py-6",
+      "sticky top-0 w-full z-50 transition-all duration-500 px-6 py-6",
       scrolled ? "bg-black backdrop-blur-xl border-b border-green-500/20 shadow-lg shadow-green-500/10" : "bg-black"
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -47,7 +47,7 @@ export default function Navbar() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="w-10 h-10 rounded-full border-2 border-green-500/50 flex items-center justify-center font-bold text-white bg-gradient-to-br from-green-500/20 to-green-600/10 hover:border-green-500 transition-all cursor-pointer"
+            className="w-10 h-10 rounded-full border-2 border-green-500/50 flex items-center justify-center font-bold text-white bg-linear-to-br from-green-500/20 to-green-600/10 hover:border-green-500 transition-all cursor-pointer"
             aria-label="Home"
           >
             K
@@ -85,7 +85,7 @@ export default function Navbar() {
           transition={{ duration: 0.5, delay: 0.2 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="hidden md:block bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300"
+          className="hidden md:block bg-linear-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300"
         >
           Resume
         </motion.button>
@@ -140,7 +140,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.3 }}
-                className="mt-2 bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-medium w-full hover:shadow-lg hover:shadow-green-500/50"
+                className="mt-2 bg-linear-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-medium w-full hover:shadow-lg hover:shadow-green-500/50"
               >
                 Resume
               </motion.button>

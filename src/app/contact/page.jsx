@@ -4,7 +4,7 @@ import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend } from "react-i
 
 export default function Contact() {
   return (
-    <section className="py-20 bg-black text-white relative overflow-hidden">
+    <section className="pt-10 pb-20 bg-black text-white relative overflow-hidden">
       {/* Background Grid matching image_91a47f.jpg */}
       <div className="absolute inset-0 opacity-10" 
            style={{ backgroundImage: `radial-gradient(#1e293b 1px, transparent 1px)`, backgroundSize: '40px 40px' }} 
