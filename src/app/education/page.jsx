@@ -32,7 +32,7 @@ const educationData = [
 
 export default function Education() {
   return (
-    <section className="py-20 bg-black text-white relative overflow-hidden">
+    <section className="py-20 bg-black text-white relative overflow-hidden mt-10">
       <div className="container mx-auto px-6 lg:px-20 relative z-10">
         
         {/* Section Heading matching image_91c280.png */}

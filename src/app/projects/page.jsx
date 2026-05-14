@@ -40,7 +40,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-20 bg-black text-white">
+    <section className="py-20 bg-black text-white mt-10">
       <div className="container mx-auto px-6 lg:px-20">
         
         {/* Section Header */}

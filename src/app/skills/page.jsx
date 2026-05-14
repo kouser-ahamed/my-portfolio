@@ -56,7 +56,7 @@ const stats = [
 
 export default function Skills() {
   return (
-    <section className="py-20 bg-black text-white">
+    <section className="py-20 bg-black text-white mt-10">
       <div className="container mx-auto px-6 lg:px-20 text-center">
         <h2 className="text-4xl font-bold mb-2">My Skills</h2>
         <p className="text-gray-500 text-sm mb-16">
