@@ -40,7 +40,7 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section className="py-20 bg-black text-white mt-10">
+    <section className="py-20 bg-black text-white">
       <div className="container mx-auto px-6 lg:px-20">
         
         {/* Section Header */}
@@ -63,7 +63,7 @@ export default function Projects() {
               {/* Image Preview Container */}
               <div className="relative aspect-video overflow-hidden bg-white/5">
                 {/* Simulated Image - Replace with <Image /> when files are ready */}
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/20" />
+                <div className="absolute inset-0 bg-linear-to-b from-transparent to-black/20" />
                 <div className="flex items-center justify-center h-full text-gray-700 font-bold italic">
                   Preview: {project.title}
                 </div>

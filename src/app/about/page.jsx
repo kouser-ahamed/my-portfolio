@@ -33,7 +33,7 @@ const experiencePoints = [
 
 export default function About() {
   return (
-    <section className="py-20 bg-black text-white relative overflow-hidden mt-10">
+    <section className="py-20 bg-black text-white relative overflow-hidden">
       {/* Background Grid Effect from image_923306.jpg */}
       <div className="absolute inset-0 opacity-20" 
            style={{ backgroundImage: `radial-gradient(#1e293b 1px, transparent 1px)`, backgroundSize: '40px 40px' }} 

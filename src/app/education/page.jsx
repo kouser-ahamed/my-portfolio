@@ -32,7 +32,7 @@ const educationData = [
 
 export default function Education() {
   return (
-    <section className="py-20 bg-black text-white relative overflow-hidden mt-10">
+    <section className="py-20 bg-black text-white relative overflow-hidden">
       <div className="container mx-auto px-6 lg:px-20 relative z-10">
         
         {/* Section Heading matching image_91c280.png */}
@@ -50,7 +50,7 @@ export default function Education() {
         <div className="relative max-w-5xl mx-auto">
           
           {/* Central Vertical Line */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[2px] bg-white/10 hidden md:block" />
+          <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-0.5 bg-white/10 hidden md:block" />
 
           <div className="space-y-12">
             {educationData.map((item, index) => (

@@ -4,7 +4,7 @@ import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiSend } from "react-i
 
 export default function Contact() {
   return (
-    <section className="py-20 bg-black text-white relative overflow-hidden mt-10">
+    <section className="py-20 bg-black text-white relative overflow-hidden">
       {/* Background Grid matching image_91a47f.jpg */}
       <div className="absolute inset-0 opacity-10" 
            style={{ backgroundImage: `radial-gradient(#1e293b 1px, transparent 1px)`, backgroundSize: '40px 40px' }} 
@@ -35,7 +35,7 @@ export default function Contact() {
 
               <div className="space-y-4">
                 {/* Email */}
-                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5 group hover:border-green-500/30 transition-all">
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/2 border border-white/5 group hover:border-green-500/30 transition-all">
                   <div className="p-3 rounded-xl bg-green-500/10 text-green-400 group-hover:bg-green-500 group-hover:text-black transition-all">
                     <FiMail size={20} />
                   </div>
@@ -43,7 +43,7 @@ export default function Contact() {
                 </div>
 
                 {/* Phone */}
-                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5 group hover:border-green-500/30 transition-all">
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/2 border border-white/5 group hover:border-green-500/30 transition-all">
                   <div className="p-3 rounded-xl bg-green-500/10 text-green-400 group-hover:bg-green-500 group-hover:text-black transition-all">
                     <FiPhone size={20} />
                   </div>
@@ -51,7 +51,7 @@ export default function Contact() {
                 </div>
 
                 {/* Location */}
-                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.02] border border-white/5 group hover:border-green-500/30 transition-all">
+                <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/2 border border-white/5 group hover:border-green-500/30 transition-all">
                   <div className="p-3 rounded-xl bg-green-500/10 text-green-400 group-hover:bg-green-500 group-hover:text-black transition-all">
                     <FiMapPin size={20} />
                   </div>
@@ -92,7 +92,7 @@ export default function Contact() {
                 <input 
                   type="text" 
                   placeholder="Enter your full name"
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-green-500/50 transition-all"
+                  className="w-full bg-white/3 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-green-500/50 transition-all"
                 />
               </div>
 
@@ -101,7 +101,7 @@ export default function Contact() {
                 <input 
                   type="email" 
                   placeholder="Enter your email address"
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-green-500/50 transition-all"
+                  className="w-full bg-white/3 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-green-500/50 transition-all"
                 />
               </div>
 
@@ -110,7 +110,7 @@ export default function Contact() {
                 <textarea 
                   rows={4}
                   placeholder="Tell me about your project, idea, or collaboration opportunity..."
-                  className="w-full bg-white/[0.03] border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-green-500/50 transition-all resize-none"
+                  className="w-full bg-white/3 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-gray-600 focus:outline-none focus:border-green-500/50 transition-all resize-none"
                 />
               </div>
 
