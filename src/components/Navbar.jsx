@@ -1,16 +1,17 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
 
 const NAV_LINKS = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Education", href: "#education" },
-  { label: "Projects", href: "#projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Skills", href: "/skills" },
+  { label: "Education", href: "/education" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Navbar() {
@@ -39,14 +40,17 @@ export default function Navbar() {
     )}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="w-10 h-10 rounded-full border-2 border-green-500/50 flex items-center justify-center font-bold text-white bg-gradient-to-br from-green-500/20 to-green-600/10 hover:border-green-500 transition-all cursor-pointer"
-        >
-          K
-        </motion.div>
+        <Link href="/">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="w-10 h-10 rounded-full border-2 border-green-500/50 flex items-center justify-center font-bold text-white bg-gradient-to-br from-green-500/20 to-green-600/10 hover:border-green-500 transition-all cursor-pointer"
+            aria-label="Home"
+          >
+            K
+          </motion.div>
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden md:flex items-center gap-1 bg-white/5 px-6 py-2 rounded-full border border-white/10 backdrop-blur-md">
@@ -58,13 +62,13 @@ export default function Navbar() {
               animate="animate"
               variants={linkVariants}
             >
-              <a
+              <Link
                 href={link.href}
                 className="text-sm text-gray-400 hover:text-green-400 px-3 py-2 rounded-md transition-all duration-300 relative group"
               >
                 {link.label}
                 <span className="absolute bottom-1 left-0 w-0 h-0.5 bg-green-400 group-hover:w-full transition-all duration-300 rounded-full" />
-              </a>
+              </Link>
             </motion.div>
           ))}
         </div>
@@ -109,17 +113,20 @@ export default function Navbar() {
           >
             <div className="flex flex-col gap-3">
               {NAV_LINKS.map((link, i) => (
-                <motion.a
+                <motion.div
                   key={link.label}
-                  href={link.href}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05, duration: 0.3 }}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-gray-400 hover:text-green-400 px-4 py-2 rounded-md hover:bg-white/5 transition-all"
                 >
-                  {link.label}
-                </motion.a>
+                  <Link
+                    href={link.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-gray-400 hover:text-green-400 px-4 py-2 rounded-md hover:bg-white/5 transition-all"
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
               <motion.button
                 initial={{ opacity: 0, y: 10 }}
