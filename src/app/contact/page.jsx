@@ -32,7 +32,7 @@ const socials = [
 
 export default function Contact() {
   return (
-    <section className="relative bg-[#05060a] text-white py-20 lg:py-28 overflow-hidden">
+    <section className="relative bg-[#05060a] text-white py-6 lg:py-12 overflow-hidden">
       {/* Background glow */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/4 right-1/4 w-[420px] h-[420px] bg-emerald-500/10 blur-[160px] rounded-full" />
@@ -41,7 +41,7 @@ export default function Contact() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-16">
         {/* Header */}
-        <div className="text-center mb-16 lg:mb-24">
+        <div className="text-center mb-6 lg:mb-10">
           <motion.h2
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function Contact() {
             </span>
           </motion.h2>
 
-          <p className="mt-5 text-gray-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+          <p className="mt-3 text-gray-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
   Have a project in mind, a job opportunity, or just want to say hello? 
   Feel free to reach out — I’m always open to discussing new ideas, 
   collaborations, and meaningful opportunities.
@@ -62,13 +62,13 @@ export default function Contact() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
           {/* Left Card */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 rounded-3xl p-7 sm:p-9 
+            className="lg:col-span-5 rounded-3xl p-6 sm:p-7 
             bg-white/[0.04] backdrop-blur-xl border border-white/10 
             transition-all duration-500 
             hover:border-emerald-500/40 
@@ -129,7 +129,7 @@ export default function Contact() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-7 rounded-3xl p-7 sm:p-9 
+            className="lg:col-span-7 rounded-3xl p-6 sm:p-7 
             bg-white/[0.04] backdrop-blur-xl border border-white/10 
             transition-all duration-500 
             hover:border-cyan-500/40 
@@ -139,11 +139,11 @@ export default function Contact() {
             <h3 className="text-xl sm:text-2xl font-bold mb-2">
               Send a Message
             </h3>
-            <p className="text-gray-400 text-sm mb-8">
+            <p className="text-gray-400 text-sm mb-6">
               I usually reply within 24 hours.
             </p>
 
-            <form className="space-y-6">
+            <form className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <Input label="Name" placeholder="Your name" />
                 <Input label="Email" placeholder="example@gmail.com" />
@@ -151,9 +151,9 @@ export default function Contact() {
 
               <Textarea label="Message" />
 
-              <button
+                <button
                 type="submit"
-                className="w-full py-4 rounded-xl font-bold text-sm 
+                className="w-full py-3.5 rounded-xl font-bold text-sm 
                 bg-gradient-to-r from-emerald-500 to-cyan-500 
                 text-black flex items-center justify-center gap-2
                 transition-all duration-300
