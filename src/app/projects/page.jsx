@@ -28,6 +28,28 @@ const projects = [
     live: "https://binary-books.vercel.app/",
     github: "https://github.com/kouser-ahamed/binary-books",
   },
+    {
+    title: "BinaryBooks",
+    description:
+      "A modern full-stack online book borrowing platform designed to provide users with a seamless digital library experience through smart book exploration, secure authentication, protected borrowing workflows, and responsive UI design.",
+    images: [
+      "/assets/binarybooks/im-1.png",
+      "/assets/binarybooks/im-2.png",
+      "/assets/binarybooks/im-3.png",
+    ],
+    tech: [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "HeroUI",
+      "MongoDB",
+      "BetterAuth",
+      "SwiperJS",
+      "React Toastify",
+    ],
+    live: "https://binary-books.vercel.app/",
+    github: "https://github.com/kouser-ahamed/binary-books",
+  },
 ];
 
 export default function Projects() {
@@ -49,7 +71,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="relative py-10 md:py-16 bg-[#040508] overflow-hidden text-white w-full">
+    <section className="relative py-5  md:py-16 bg-[#040508] overflow-hidden text-white w-full">
 
       {/* Background Glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -66,7 +88,7 @@ export default function Projects() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4"
+            className="text-2xl sm:text-4xl md:text-5xl font-extrabold mb-2"
           >
             Featured{" "}
             <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">
