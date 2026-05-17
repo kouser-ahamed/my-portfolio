@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiBookOpen, FiAward } from "react-icons/fi";
+import { FiBookOpen } from "react-icons/fi";
+import { FaGraduationCap } from "react-icons/fa";
 import { cn } from "@/lib/utils";
 
 const educationData = [
@@ -104,7 +105,7 @@ export default function Education() {
                                shadow-[0_0_40px_rgba(16,185,129,0.25)]
                                backdrop-blur-xl"
                   >
-                    <FiAward className="text-emerald-400" size={18} />
+                    <FaGraduationCap className="text-emerald-400" size={18} />
                   </motion.div>
                 </div>
 
