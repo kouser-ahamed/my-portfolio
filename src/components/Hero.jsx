@@ -104,7 +104,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-black pt-20 text-white md:pt-24">
+    <section className="relative flex min-h-[80vh] items-start overflow-hidden bg-black pt-6 text-white md:pt-8">
       {/* Ambient Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -143,13 +143,13 @@ export default function Hero() {
         />
       </div>
 
-      <div className="container relative z-10 mx-auto grid items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:px-20">
+      <div className="container relative z-10 mx-auto grid items-start justify-items-center gap-8 px-5 sm:px-8 lg:grid-cols-2 lg:px-20 py-6">
         {/* Left Side */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="text-center lg:text-left"
+          className="text-center lg:text-left self-start"
         >
           {/* Badge */}
           <motion.div
@@ -319,9 +319,10 @@ export default function Hero() {
             duration: 1,
             type: "spring",
           }}
-          className="relative flex justify-center"
+          className="relative flex justify-center self-start"
         >
           <motion.div
+            initial={{ y: -20 }}
             animate={{
               y: [-12, 12],
             }}
