@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 import {
   SiReact,
@@ -10,8 +9,9 @@ import {
   SiExpress,
   SiMongodb,
   SiMysql,
+  SiGit,
+  SiVercel,
 } from "react-icons/si";
-
 import {
   FiLock,
   FiServer,
@@ -21,186 +21,200 @@ import {
   FiZap,
   FiRefreshCw,
   FiGrid,
-  FiArrowUpRight,
 } from "react-icons/fi";
 
 const skillCategories = [
   {
     title: "Frontend Engineering",
     description: "Building responsive, modern & high-performance interfaces.",
-    accent: "from-cyan-500/20 via-cyan-400/5",
+    gradient: "from-cyan-500/20 via-blue-500/10 to-transparent",
+    borderColor: "group-hover:border-cyan-500/50",
     skills: [
-      { name: "React.js", icon: SiReact, color: "text-cyan-400" },
-      { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
-      { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-teal-400" },
-      { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400" },
+      { name: "React.js", icon: SiReact, color: "text-cyan-400", bg: "bg-cyan-500/10" },
+      { name: "Next.js", icon: SiNextdotjs, color: "text-white", bg: "bg-white/10" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-teal-400", bg: "bg-teal-500/10" },
+      { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400", bg: "bg-yellow-500/10" },
     ],
   },
-
   {
     title: "Backend Systems",
     description: "Scalable APIs, authentication & server-side architecture.",
-    accent: "from-emerald-500/20 via-green-400/5",
+    gradient: "from-emerald-500/20 via-green-500/10 to-transparent",
+    borderColor: "group-hover:border-emerald-500/50",
     skills: [
-      { name: "Node.js", icon: SiNodedotjs, color: "text-green-500" },
-      { name: "Express.js", icon: SiExpress, color: "text-zinc-300" },
-      { name: "REST APIs", icon: FiServer, color: "text-blue-400" },
-      { name: "Authentication", icon: FiLock, color: "text-purple-400" },
+      { name: "Node.js", icon: SiNodedotjs, color: "text-green-500", bg: "bg-green-500/10" },
+      { name: "Express.js", icon: SiExpress, color: "text-gray-300", bg: "bg-gray-500/10" },
+      { name: "REST APIs", icon: FiServer, color: "text-blue-400", bg: "bg-blue-500/10" },
+      { name: "Authentication", icon: FiLock, color: "text-purple-400", bg: "bg-purple-500/10" },
     ],
   },
-
   {
-    title: "Database & APIs",
+    title: "Database & Storage",
     description: "Optimized data architecture & seamless integrations.",
-    accent: "from-orange-500/20 via-yellow-400/5",
+    gradient: "from-orange-500/20 via-yellow-500/10 to-transparent",
+    borderColor: "group-hover:border-orange-500/50",
     skills: [
-      { name: "MongoDB", icon: SiMongodb, color: "text-emerald-500" },
-      { name: "MySQL", icon: SiMysql, color: "text-orange-500" },
-      { name: "Database Design", icon: FiDatabase, color: "text-yellow-500" },
-      { name: "API Integration", icon: FiLayers, color: "text-cyan-500" },
+      { name: "MongoDB", icon: SiMongodb, color: "text-emerald-500", bg: "bg-emerald-500/10" },
+      { name: "MySQL", icon: SiMysql, color: "text-orange-500", bg: "bg-orange-500/10" },
+      { name: "Database Design", icon: FiDatabase, color: "text-yellow-500", bg: "bg-yellow-500/10" },
+      { name: "API Integration", icon: FiLayers, color: "text-cyan-500", bg: "bg-cyan-500/10" },
     ],
   },
-
   {
-    title: "Advanced Solutions",
+    title: "Tools & Workflow",
     description: "Modern tools powering intelligent digital products.",
-    accent: "from-purple-500/20 via-pink-400/5",
+    gradient: "from-purple-500/20 via-pink-500/10 to-transparent",
+    borderColor: "group-hover:border-purple-500/50",
     skills: [
-      { name: "QR Systems", icon: FiGrid, color: "text-zinc-300" },
-      { name: "Real-time Apps", icon: FiZap, color: "text-yellow-400" },
-      { name: "CI/CD", icon: FiRefreshCw, color: "text-green-400" },
-      { name: "AI Tools", icon: FiCpu, color: "text-purple-400" },
+      { name: "Git & GitHub", icon: SiGit, color: "text-orange-500", bg: "bg-orange-500/10" },
+      { name: "Vercel", icon: SiVercel, color: "text-white", bg: "bg-white/10" },
+      { name: "CI/CD", icon: FiRefreshCw, color: "text-green-400", bg: "bg-green-500/10" },
+      { name: "AI Tools", icon: FiCpu, color: "text-purple-400", bg: "bg-purple-500/10" },
     ],
   },
 ];
 
 const stats = [
-  {
-    label: "Technologies",
-    value: "08+",
-    color: "from-emerald-400 to-green-600",
-  },
-  {
-    label: "Experience",
-    value: "01+",
-    color: "from-cyan-400 to-blue-600",
-  },
-  {
-    label: "Projects",
-    value: "12+",
-    color: "from-purple-400 to-pink-600",
-  },
+  { label: "Technologies", value: "15+", color: "from-emerald-400 to-green-600", icon: FiZap },
+  { label: "Experience", value: "2+ Yrs", color: "from-cyan-400 to-blue-600", icon: FiCpu },
+  { label: "Projects", value: "12+", color: "from-purple-400 to-pink-600", icon: FiGrid },
 ];
 
 export default function Skills() {
   return (
-    <section className="relative overflow-hidden bg-black py-20 text-white">
-      {/* Ambient Background */}
+    <section className="relative py-15 bg-black overflow-hidden">
+      
+      {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 h-[500px] w-[500px] rounded-full bg-cyan-500/10 blur-[140px]" />
-        <div className="absolute bottom-0 right-1/4 h-[500px] w-[500px] rounded-full bg-emerald-500/10 blur-[140px]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#0a0a0a_1px,transparent_1px),linear-gradient(to_bottom,#0a0a0a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{ duration: 8, repeat: Infinity }}
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-[128px]"
+        />
+        <motion.div
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{ duration: 10, repeat: Infinity, delay: 1 }}
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-[128px]"
+        />
       </div>
 
       <div className="container relative z-10 mx-auto px-6 lg:px-20">
-        {/* Header */}
-        <div className="mx-auto mb-14 max-w-3xl text-center">
+        
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-20"
+        >
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="mb-5 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.03] px-5 py-2 text-[10px] font-semibold uppercase tracking-[0.35em] text-emerald-400 backdrop-blur-xl"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6"
           >
-            Technical Expertise
+            <FiZap className="text-emerald-400" />
+            <span className="text-sm font-medium text-gray-400 tracking-wider">TECHNICAL EXPERTISE</span>
           </motion.div>
 
-          <motion.h2
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-4xl font-black leading-tight tracking-tight md:text-5xl"
-          >
-            Crafting Digital
-            <span className="block bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent">
-              Experiences
-            </span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="mx-auto mt-5 max-w-xl text-sm leading-relaxed text-zinc-400 md:text-base"
-          >
-            Passionate about building scalable, high-performance and visually
-            refined web applications using modern technologies.
-          </motion.p>
-        </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Skills & <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">Technologies</span>
+          </h2>
+          
+          <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+            Passionate about building scalable, high-performance and visually refined web applications using modern technologies.
+          </p>
+        </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {skillCategories.map((category, idx) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
               viewport={{ once: true }}
-              className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03] p-8 backdrop-blur-xl"
+              className="group relative"
             >
-              {/* Glow */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${category.accent} opacity-0 transition duration-700 group-hover:opacity-100`}
-              />
+              {/* Card Container */}
+              <div className="relative h-full p-8 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-white/20">
+                
+                {/* Gradient Overlay */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
-              {/* Header */}
-              <div className="relative z-10 mb-10 flex items-start justify-between">
-                <div>
-                  <h3 className="text-xl font-bold tracking-tight">
-                    {category.title}
-                  </h3>
-
-                  <p className="mt-2 max-w-sm text-sm leading-relaxed text-zinc-400">
-                    {category.description}
-                  </p>
-                </div>
-
-                <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-zinc-400 transition duration-500 group-hover:rotate-45 group-hover:text-white">
-                  <FiArrowUpRight size={16} />
-                </div>
-              </div>
-
-              {/* Skills */}
-              <div className="grid grid-cols-2 gap-4">
-                {category.skills.map((skill) => (
-                  <motion.div
-                    key={skill.name}
-                    whileHover={{ y: -5 }}
-                    transition={{ duration: 0.2 }}
-                    className="group/card relative overflow-hidden rounded-3xl border border-white/10 bg-black/30 p-5 transition-all duration-500 hover:border-white/20"
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/[0.04] to-transparent opacity-0 transition duration-500 group-hover/card:opacity-100" />
-
-                    <div className="relative z-10 flex flex-col items-center text-center">
-                      <div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] mx-auto">
-                        <skill.icon
-                          className={`text-[28px] ${skill.color}`}
-                        />
-                      </div>
-
-                      <span className="text-sm font-semibold tracking-wide text-zinc-300 transition-colors duration-300 group-hover/card:text-white">
-                        {skill.name}
-                      </span>
+                {/* Content */}
+                <div className="relative z-10">
+                  
+                  {/* Header */}
+                  <div className="flex items-start justify-between mb-8">
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                        {category.title}
+                      </h3>
+                      <p className="text-sm text-gray-400 max-w-xs leading-relaxed">
+                        {category.description}
+                      </p>
                     </div>
-                  </motion.div>
-                ))}
+                    
+                    <motion.div
+                      whileHover={{ rotate: 45 }}
+                      className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 group-hover:text-emerald-400 group-hover:border-emerald-500/30 transition-all"
+                    >
+                      <FiZap size={20} />
+                    </motion.div>
+                  </div>
+
+                  {/* Skills Grid */}
+                  <div className="grid grid-cols-2 gap-4">
+                    {category.skills.map((skill, i) => (
+                      <motion.div
+                        key={skill.name}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ delay: idx * 0.1 + i * 0.05 }}
+                        viewport={{ once: true }}
+                        whileHover={{ y: -5, scale: 1.02 }}
+                        className="relative group/card"
+                      >
+                        <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300">
+                          
+                          {/* Icon Container */}
+                          <div className={`w-14 h-14 rounded-xl ${skill.bg} border border-white/10 flex items-center justify-center mb-4 group-hover/card:scale-110 transition-transform`}>
+                            <skill.icon className={`text-2xl ${skill.color}`} />
+                          </div>
+
+                          {/* Skill Name */}
+                          <span className="text-sm font-semibold text-gray-300 group-hover/card:text-white transition-colors">
+                            {skill.name}
+                          </span>
+
+                          {/* Hover Glow */}
+                          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity pointer-events-none" />
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
               </div>
             </motion.div>
           ))}
         </div>
 
-        {/* Stats */}
-        <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-3">
+        {/* Stats Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
           {stats.map((stat, idx) => (
             <motion.div
               key={stat.label}
@@ -208,25 +222,36 @@ export default function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: idx * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{ y: -8 }}
-              className="group relative overflow-hidden rounded-[32px] border border-white/10 bg-white/[0.03] p-10 backdrop-blur-xl"
+              whileHover={{ y: -8, scale: 1.02 }}
+              className="group relative"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
+              <div className="relative p-10 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-xl overflow-hidden">
+                
+                {/* Gradient Glow */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
 
-              <div className="relative z-10 text-center">
-                <h3
-                  className={`bg-gradient-to-br ${stat.color} bg-clip-text text-5xl font-black text-transparent`}
+                {/* Icon */}
+                <motion.div
+                  whileHover={{ rotate: 360 }}
+                  transition={{ duration: 0.6 }}
+                  className="relative z-10 mb-6"
                 >
+                  <stat.icon className="text-4xl text-gray-600 group-hover:text-emerald-400 transition-colors" />
+                </motion.div>
+
+                {/* Value */}
+                <h3 className={`relative z-10 text-5xl font-black bg-gradient-to-br ${stat.color} bg-clip-text text-transparent mb-3`}>
                   {stat.value}
                 </h3>
 
-                <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.35em] text-zinc-500">
+                {/* Label */}
+                <p className="relative z-10 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-400 transition-colors">
                   {stat.label}
                 </p>
               </div>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
