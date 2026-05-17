@@ -6,7 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const projects = [
-  {
+   {
     title: "BinaryBooks",
     description:
       "A modern full-stack online book borrowing platform designed to provide users with a seamless digital library experience through smart book exploration, secure authentication, protected borrowing workflows, and responsive UI design.",
@@ -14,6 +14,13 @@ const projects = [
       "/assets/binarybooks/im-1.png",
       "/assets/binarybooks/im-2.png",
       "/assets/binarybooks/im-3.png",
+      "/assets/binarybooks/im-4.png",
+      "/assets/binarybooks/im-5.png",
+      "/assets/binarybooks/im-6.png",
+      "/assets/binarybooks/im-7.png",
+      "/assets/binarybooks/im-8.png",
+      "/assets/binarybooks/im-9.png",
+      "/assets/binarybooks/im-10.png",
     ],
     tech: [
       "Next.js",
@@ -29,27 +36,90 @@ const projects = [
     github: "https://github.com/kouser-ahamed/binary-books",
   },
     {
-    title: "BinaryBooks",
-    description:
-      "A modern full-stack online book borrowing platform designed to provide users with a seamless digital library experience through smart book exploration, secure authentication, protected borrowing workflows, and responsive UI design.",
-    images: [
-      "/assets/binarybooks/im-1.png",
-      "/assets/binarybooks/im-2.png",
-      "/assets/binarybooks/im-3.png",
-    ],
-    tech: [
-      "Next.js",
-      "React.js",
-      "Tailwind CSS",
-      "HeroUI",
-      "MongoDB",
-      "BetterAuth",
-      "SwiperJS",
-      "React Toastify",
-    ],
-    live: "https://binary-books.vercel.app/",
-    github: "https://github.com/kouser-ahamed/binary-books",
-  },
+  title: "KeenKeeper",
+
+  description:
+    "A modern friendship-tracking web application designed to help users maintain meaningful personal relationships through smart communication tracking, interaction analytics, engagement monitoring, and responsive dashboard experiences.",
+
+  images: [
+    "/assets/keen-keeper/p1.png",
+    "/assets/keen-keeper/p2.png",
+    "/assets/keen-keeper/p3.png",
+    "/assets/keen-keeper/p4.png",
+    "/assets/keen-keeper/p5.png",
+    "/assets/keen-keeper/p6.png",
+  ],
+
+  tech: [
+    "React.js",
+    "React Router",
+    "Context API",
+    "Tailwind CSS",
+    "DaisyUI",
+    "Recharts",
+    "React Toastify",
+    "React Icons",
+    "React Spinners",
+  ],
+
+  live: "https://superb-panda-c429ef-kouser.netlify.app/",
+
+  github: "https://github.com/kouser-ahamed/B13-A7-keen-keeper",
+},
+{
+  title: "GitHub Issues Tracker",
+
+  description:
+    "A responsive issue management web application inspired by GitHub, allowing users to track, filter, search, and explore issues through interactive cards, status indicators, and detailed modal-based issue views.",
+
+  images: [
+    "/assets/GitHubIssuesPic/git-1.png",
+    "/assets/GitHubIssuesPic/git-2.png",
+    "/assets/GitHubIssuesPic/git-3.png",
+    "/assets/GitHubIssuesPic/git-4.png",
+  ],
+
+  tech: [
+    "HTML5",
+    "JavaScript",
+    "Tailwind CSS",
+    "DaisyUI",
+    "Fetch API",
+    "Font Awesome",
+  ],
+
+  live: "https://github-issue-tracker-kouser.netlify.app/",
+
+  github:
+    "https://github.com/kouser-ahamed/B13-A5-Github-Issue-Tracker-Kouser",
+},
+{
+  title: "TechWave Podcast Website",
+
+  description:
+    "A modern and responsive podcast landing page designed to showcase technology-focused podcast content through visually engaging layouts, embedded video episodes, clean UI sections, and fully responsive user experience across all devices.",
+
+  images: [
+    "/assets/TechWaveDemoPic/tech-1.png",
+    "/assets/TechWaveDemoPic/tech-2.png",
+    "/assets/TechWaveDemoPic/tech-3.png",
+    "/assets/TechWaveDemoPic/tech-4.png",
+    "/assets/TechWaveDemoPic/tech-5.png",
+  ],
+
+  tech: [
+    "HTML5",
+    "CSS3",
+    "Flexbox",
+    "CSS Grid",
+    "Font Awesome",
+    "Google Fonts",
+  ],
+
+  live: "https://kouser-ahamed.github.io/B13-A02-TechWave_Kouser/",
+
+  github: "https://github.com/kouser-ahamed/B13-A02-TechWave_Kouser",
+}
 ];
 
 export default function Projects() {
