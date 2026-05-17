@@ -9,6 +9,26 @@ import {
   FiLinkedin,
   FiSend,
 } from "react-icons/fi";
+import { FaFacebookF } from "react-icons/fa";
+
+const socials = [
+  {
+    Icon: FiGithub,
+    href: "https://github.com/kouser-ahamed",
+    label: "GitHub",
+  },
+  {
+    Icon: FiLinkedin,
+    href: "https://www.linkedin.com/in/kouser-ahamed",
+    label: "LinkedIn",
+    cyan: true,
+  },
+  {
+    Icon: FaFacebookF,
+    href: "https://www.facebook.com/kouserahamed420",
+    label: "Facebook",
+  },
+];
 
 export default function Contact() {
   return (
@@ -91,8 +111,15 @@ export default function Contact() {
                 Social Profiles
               </span>
               <div className="flex gap-3">
-                <SocialIcon icon={<FiGithub size={18} />} />
-                <SocialIcon icon={<FiLinkedin size={18} />} cyan />
+                {socials.map(({ Icon, href, label, cyan }) => (
+                  <SocialIcon
+                    key={label}
+                    icon={<Icon size={18} />}
+                    href={href}
+                    label={label}
+                    cyan={cyan}
+                  />
+                ))}
               </div>
             </div>
           </motion.div>
@@ -173,10 +200,13 @@ function ContactItem({ icon, label, value, href }) {
   );
 }
 
-function SocialIcon({ icon, cyan }) {
+function SocialIcon({ icon, href, label, cyan }) {
   return (
     <a
-      href="#"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label={label}
       className={`p-3 rounded-xl border transition-all duration-300 
       hover:-translate-y-1 hover:scale-110 hover:shadow-lg
       ${
