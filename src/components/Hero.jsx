@@ -258,7 +258,10 @@ export default function Hero() {
               <FiArrowUpRight className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
             </MotionLink>
 
-            <motion.button
+            <motion.a
+              href="https://drive.google.com/file/d/1n2LhgxOIx6XL6rRq1rK4ou_B4iFH5J8d/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{
                 scale: 1.03,
               }}
@@ -268,7 +271,7 @@ export default function Hero() {
               className="rounded-2xl border border-white/10 bg-white/[0.03] px-7 py-4 text-sm sm:text-base font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:border-white/20 hover:bg-white/[0.06]"
             >
               Download Resume
-            </motion.button>
+            </motion.a>
           </motion.div>
 
           {/* Socials */}
