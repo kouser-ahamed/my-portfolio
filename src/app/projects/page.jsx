@@ -71,7 +71,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="relative py-5  md:py-16 bg-[#040508] overflow-hidden text-white w-full">
+    <section className="relative py-4 md:py-8 bg-[#040508] overflow-hidden text-white w-full">
 
       {/* Background Glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -83,7 +83,7 @@ export default function Projects() {
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
 
         {/* Header */}
-        <div className="text-center mb-10 md:mb-16">
+        <div className="text-center mb-6 md:mb-10">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -102,8 +102,8 @@ export default function Projects() {
           </p>
         </div>
 
-        {/* Grid Container - Fixed to center-align and scale nicely */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start justify-center max-w-md mx-auto md:max-w-none w-full">
+        {/* Grid Container - allow full width on small screens */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start w-full">
 
           {projects.map((project, index) => (
             <motion.div
@@ -207,7 +207,7 @@ export default function Projects() {
               </div>
 
               {/* Content Section - Adjusted Padding for Screen Safety */}
-              <div className="relative z-10 p-5 sm:p-6 md:p-6 lg:p-7 box-border">
+              <div className="relative z-10 p-4 sm:p-5 md:p-5 lg:p-6 box-border">
 
                 {/* Title */}
                 <h3 className="text-xl sm:text-2xl font-bold mb-3 group-hover:text-cyan-300 transition-colors duration-300">
