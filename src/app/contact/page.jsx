@@ -39,7 +39,7 @@ export default function Contact() {
                   <div className="p-3 rounded-xl bg-green-500/10 text-green-400 group-hover:bg-green-500 group-hover:text-black transition-all">
                     <FiMail size={20} />
                   </div>
-                  <span className="text-gray-300 text-sm md:text-base">n.i.nahid02@gmail.com</span>
+                  <span className="text-gray-300 text-sm md:text-base">kouserahamed.cse.diu@gmail.com</span>
                 </div>
 
                 {/* Phone */}
@@ -47,7 +47,7 @@ export default function Contact() {
                   <div className="p-3 rounded-xl bg-green-500/10 text-green-400 group-hover:bg-green-500 group-hover:text-black transition-all">
                     <FiPhone size={20} />
                   </div>
-                  <span className="text-gray-300 text-sm md:text-base">+8801787087017</span>
+                  <span className="text-gray-300 text-sm md:text-base">+8801322699296</span>
                 </div>
 
                 {/* Location */}
@@ -55,7 +55,7 @@ export default function Contact() {
                   <div className="p-3 rounded-xl bg-green-500/10 text-green-400 group-hover:bg-green-500 group-hover:text-black transition-all">
                     <FiMapPin size={20} />
                   </div>
-                  <span className="text-gray-300 text-sm md:text-base">Kishoreganj, Bangladesh (Remote Available)</span>
+                  <span className="text-gray-300 text-sm md:text-base">Uttora-11, Dhaka, Bangladesh</span>
                 </div>
               </div>
             </div>
