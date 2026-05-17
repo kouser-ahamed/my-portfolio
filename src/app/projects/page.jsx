@@ -54,7 +54,7 @@ export default function Projects() {
   }, []);
 
   return (
-    <section className="relative py-15 bg-[#040508] overflow-hidden text-white">
+    <section className="relative py-5 bg-[#040508] overflow-hidden text-white">
 
       {/* Background Glow */}
       <div className="absolute inset-0 overflow-hidden">
@@ -65,7 +65,7 @@ export default function Projects() {
       <div className="container relative z-10 mx-auto px-6 lg:px-20">
 
         {/* Header */}
-        <div className="text-center mb-24">
+        <div className="text-center mb-5">
           <motion.h2
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
