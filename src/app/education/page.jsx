@@ -37,7 +37,7 @@ const educationData = [
 
 export default function Education() {
   return (
-    <section className="relative bg-[#05060a] text-white py-20 md:py-28 overflow-hidden">
+    <section className="relative bg-[#05060a] text-white py-8 md:py-12 overflow-hidden">
 
       {/* ===== BACKGROUND ===== */}
       <div className="absolute inset-0">
@@ -53,10 +53,10 @@ export default function Education() {
         />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-16">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 lg:px-12">
 
         {/* ===== HEADER ===== */}
-        <div className="text-center mb-16 md:mb-24">
+        <div className="text-center mb-6 md:mb-10">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export default function Education() {
             </span>
           </motion.h2>
 
-          <p className="mt-4 md:mt-6 max-w-2xl mx-auto text-gray-400 text-sm md:text-base leading-relaxed">
+          <p className="mt-2 md:mt-3 max-w-2xl mx-auto text-gray-400 text-sm md:text-base leading-relaxed">
             A structured overview of my academic background, showcasing continuous growth,
             discipline, and a strong foundation in computer science and engineering.
           </p>
@@ -83,7 +83,7 @@ export default function Education() {
                           bg-gradient-to-b from-emerald-500/20 via-white/10 to-cyan-500/20
                           shadow-[0_0_25px_rgba(16,185,129,0.15)]" />
 
-          <div className="space-y-12 md:space-y-20">
+          <div className="space-y-8 md:space-y-12">
 
             {educationData.map((item, index) => (
               <div
@@ -128,7 +128,7 @@ export default function Education() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    className="relative p-6 md:p-8 rounded-2xl md:rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-2xl transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_25px_90px_rgba(16,185,129,0.15)] group overflow-hidden"
+                    className="relative p-4 md:p-6 rounded-2xl md:rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-2xl transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_25px_90px_rgba(16,185,129,0.15)] group overflow-hidden"
                   >
 
                     {/* HOVER GLOW LAYER */}
@@ -136,7 +136,7 @@ export default function Education() {
                                     bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/10" />
 
                     {/* META */}
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <div className="flex flex-wrap gap-2 mb-3">
                       <span className="px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[11px] md:text-xs bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-medium">
                         {item.year}
                       </span>
@@ -152,7 +152,7 @@ export default function Education() {
                     </h3>
 
                     {/* INSTITUTION */}
-                    <div className="flex items-center gap-2 text-xs md:text-sm text-emerald-400/80 mt-1.5 mb-3.5">
+                    <div className="flex items-center gap-2 text-xs md:text-sm text-emerald-400/80 mt-1 mb-2.5">
                       <FiBookOpen className="flex-shrink-0" size={14} />
                       <span className="line-clamp-1">{item.institution}</span>
                     </div>
