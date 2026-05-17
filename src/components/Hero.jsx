@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   FiGithub,
@@ -91,6 +92,8 @@ const itemVariants = {
     },
   },
 };
+
+const MotionLink = motion(Link);
 
 export default function Hero() {
   const [currentTitle, setCurrentTitle] = useState(0);
@@ -240,7 +243,8 @@ export default function Hero() {
             variants={itemVariants}
             className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center lg:justify-start"
           >
-            <motion.button
+            <MotionLink
+              href="/projects"
               whileHover={{
                 scale: 1.03,
               }}
@@ -252,7 +256,7 @@ export default function Hero() {
               View Projects
 
               <FiArrowUpRight className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
-            </motion.button>
+            </MotionLink>
 
             <motion.button
               whileHover={{
