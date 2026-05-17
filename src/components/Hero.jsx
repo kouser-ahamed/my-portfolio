@@ -365,7 +365,7 @@ export default function Hero() {
               className="relative h-full w-full overflow-hidden rounded-full border-4 border-emerald-500/30 p-1"
             >
               <Image
-                src="/IMG_2839.JPG"
+                src="/imggg.jpg"
                 alt="Kouser Ahamed"
                 fill
                 priority
