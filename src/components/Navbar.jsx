@@ -78,17 +78,20 @@ export default function Navbar() {
           })}
         </div>
 
-        {/* Desktop Resume Button */}
-        <motion.button
+        {/* Desktop Resume Link */}
+        <motion.a
+          href="https://drive.google.com/file/d/1n2LhgxOIx6XL6rRq1rK4ou_B4iFH5J8d/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="hidden md:block bg-linear-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300"
+          className="hidden md:inline-block bg-linear-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300"
         >
           Resume
-        </motion.button>
+        </motion.a>
 
         {/* Mobile Menu Button */}
         <motion.button
@@ -136,14 +139,16 @@ export default function Navbar() {
                   </motion.div>
                 );
               })}
-              <motion.button
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3, duration: 0.3 }}
-                className="mt-2 bg-linear-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-medium w-full hover:shadow-lg hover:shadow-green-500/50"
+              <motion.a
+                href="https://drive.google.com/file/d/1n2LhgxOIx6XL6rRq1rK4ou_B4iFH5J8d/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="block bg-linear-to-r from-green-500 to-green-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/50 transition-all duration-300"
               >
                 Resume
-              </motion.button>
+              </motion.a>
             </div>
           </motion.div>
         )}
