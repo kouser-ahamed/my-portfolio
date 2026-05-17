@@ -184,10 +184,10 @@ export default function Skills() {
                         whileHover={{ y: -5, scale: 1.02 }}
                         className="relative group/card"
                       >
-                        <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300">
+                        <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300 text-center">
                           
                           {/* Icon Container */}
-                          <div className={`w-14 h-14 rounded-xl ${skill.bg} border border-white/10 flex items-center justify-center mb-4 group-hover/card:scale-110 transition-transform`}>
+                          <div className={`w-14 h-14 rounded-xl ${skill.bg} border border-white/10 flex items-center justify-center mb-4 mx-auto group-hover/card:scale-110 transition-transform`}>
                             <skill.icon className={`text-2xl ${skill.color}`} />
                           </div>
 
