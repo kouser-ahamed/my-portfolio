@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+
+const MotionLink = motion(Link);
 import {
   FiCode,
   FiCpu,
@@ -259,13 +262,14 @@ export default function About() {
                 ))}
               </div>
 
-              <motion.button
+              <MotionLink
+                href="/contact"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 py-4 text-sm font-bold text-white shadow-lg shadow-emerald-500/25 transition-all hover:shadow-emerald-500/40 sm:text-base"
+                className="inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-emerald-500 to-green-600 py-4 text-sm font-bold text-white shadow-lg shadow-emerald-500/25 transition-all hover:shadow-emerald-500/40 sm:text-base"
               >
                 Let’s Work Together
-              </motion.button>
+              </MotionLink>
             </div>
           </motion.div>
         </div>
