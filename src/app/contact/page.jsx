@@ -34,9 +34,11 @@ export default function Contact() {
             </span>
           </motion.h2>
 
-          <p className="mt-5 text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
-            Open for MERN stack roles, freelance projects, and collaborations.
-          </p>
+          <p className="mt-5 text-gray-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+  Have a project in mind, a job opportunity, or just want to say hello? 
+  Feel free to reach out — I’m always open to discussing new ideas, 
+  collaborations, and meaningful opportunities.
+</p>
         </div>
 
         {/* Grid */}
@@ -46,7 +48,13 @@ export default function Contact() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-5 rounded-3xl p-7 sm:p-9 bg-white/[0.04] backdrop-blur-xl border border-white/10 flex flex-col justify-between"
+            className="lg:col-span-5 rounded-3xl p-7 sm:p-9 
+            bg-white/[0.04] backdrop-blur-xl border border-white/10 
+            transition-all duration-500 
+            hover:border-emerald-500/40 
+            hover:shadow-[0_0_80px_-20px_rgba(16,185,129,0.35)] 
+            hover:-translate-y-1
+            flex flex-col justify-between"
           >
             <div>
               <h3 className="text-xl sm:text-2xl font-bold mb-3">
@@ -94,7 +102,12 @@ export default function Contact() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="lg:col-span-7 rounded-3xl p-7 sm:p-9 bg-white/[0.04] backdrop-blur-xl border border-white/10"
+            className="lg:col-span-7 rounded-3xl p-7 sm:p-9 
+            bg-white/[0.04] backdrop-blur-xl border border-white/10 
+            transition-all duration-500 
+            hover:border-cyan-500/40 
+            hover:shadow-[0_0_80px_-20px_rgba(34,211,238,0.35)] 
+            hover:-translate-y-1"
           >
             <h3 className="text-xl sm:text-2xl font-bold mb-2">
               Send a Message
@@ -113,7 +126,14 @@ export default function Contact() {
 
               <button
                 type="submit"
-                className="w-full py-4 rounded-xl font-bold text-sm bg-gradient-to-r from-emerald-500 to-cyan-500 text-black flex items-center justify-center gap-2"
+                className="w-full py-4 rounded-xl font-bold text-sm 
+                bg-gradient-to-r from-emerald-500 to-cyan-500 
+                text-black flex items-center justify-center gap-2
+                transition-all duration-300
+                hover:from-emerald-400 hover:to-cyan-400
+                hover:shadow-[0_10px_40px_-10px_rgba(16,185,129,0.6)]
+                hover:-translate-y-0.5
+                active:scale-95"
               >
                 Send Message <FiSend size={16} />
               </button>
@@ -125,40 +145,31 @@ export default function Contact() {
   );
 }
 
-/* ===== SUB COMPONENTS (JS SAFE) ===== */
+/* ===== SUB COMPONENTS ===== */
 
 function ContactItem({ icon, label, value, href }) {
-  if (href) {
-    return (
-      <a
-        href={href}
-        className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/10 hover:border-emerald-500/30 transition"
-      >
-        <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400">
-          {icon}
-        </div>
-        <div className="min-w-0">
-          <p className="text-[10px] uppercase tracking-widest text-emerald-400 font-bold">
-            {label}
-          </p>
-          <p className="text-sm text-gray-300 break-all">{value}</p>
-        </div>
-      </a>
-    );
-  }
+  const Wrapper = href ? "a" : "div";
 
   return (
-    <div className="flex items-center gap-4 p-4 rounded-2xl bg-white/[0.03] border border-white/10">
-      <div className="p-3 rounded-xl bg-cyan-500/10 text-cyan-400">
+    <Wrapper
+      href={href}
+      className="flex items-center gap-4 p-4 rounded-2xl 
+      bg-white/[0.03] border border-white/10 
+      transition-all duration-300 
+      hover:border-emerald-500/40 
+      hover:bg-emerald-500/[0.04]
+      hover:scale-[1.02]"
+    >
+      <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-400">
         {icon}
       </div>
-      <div>
-        <p className="text-[10px] uppercase tracking-widest text-cyan-400 font-bold">
+      <div className="min-w-0">
+        <p className="text-[10px] uppercase tracking-widest text-emerald-400 font-bold">
           {label}
         </p>
-        <p className="text-sm text-gray-300">{value}</p>
+        <p className="text-sm text-gray-300 break-all">{value}</p>
       </div>
-    </div>
+    </Wrapper>
   );
 }
 
@@ -166,10 +177,12 @@ function SocialIcon({ icon, cyan }) {
   return (
     <a
       href="#"
-      className={`p-3 rounded-xl border transition hover:-translate-y-0.5 ${
+      className={`p-3 rounded-xl border transition-all duration-300 
+      hover:-translate-y-1 hover:scale-110 hover:shadow-lg
+      ${
         cyan
-          ? "bg-cyan-500/10 border-cyan-500/20 text-cyan-400"
-          : "bg-white/5 border-white/10 text-gray-400"
+          ? "bg-cyan-500/10 border-cyan-500/20 text-cyan-400 hover:bg-cyan-500/20 hover:shadow-cyan-500/30"
+          : "bg-white/5 border-white/10 text-gray-400 hover:text-white hover:border-white/30"
       }`}
     >
       {icon}
