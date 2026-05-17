@@ -127,14 +127,10 @@ export default function Education() {
                     whileInView={{ opacity: 1, y: 0, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: index * 0.15 }}
-                    className="relative p-8 rounded-3xl
-                               bg-white/[0.03]
-                               border border-white/10
-                               backdrop-blur-2xl
-                               transition-all duration-300
-                               hover:border-emerald-500/40
-                               hover:shadow-[0_25px_90px_rgba(16,185,129,0.15)]
-                               group overflow-hidden"
+                    className={cn(
+                      "relative p-8 rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-2xl transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_25px_90px_rgba(16,185,129,0.15)] group overflow-hidden",
+                      item.side === "left" && "md:text-left"
+                    )}
                   >
 
                     {/* HOVER GLOW LAYER */}
@@ -142,12 +138,7 @@ export default function Education() {
                                     bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/10" />
 
                     {/* META */}
-                    <div
-                      className={cn(
-                        "flex flex-wrap gap-2 mb-5",
-                        item.side === "left" && "md:justify-end"
-                      )}
-                    >
+                    <div className="flex flex-wrap gap-2 mb-5">
                       <span className="px-3 py-1 rounded-full text-xs bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
                         {item.year}
                       </span>
@@ -163,12 +154,7 @@ export default function Education() {
                     </h3>
 
                     {/* INSTITUTION */}
-                    <div
-                      className={cn(
-                        "flex items-center gap-2 text-sm text-emerald-400/80 mt-2 mb-4",
-                        item.side === "left" && "md:justify-end"
-                      )}
-                    >
+                    <div className="flex items-center gap-2 text-sm text-emerald-400/80 mt-2 mb-4">
                       <FiBookOpen size={14} />
                       <span>{item.institution}</span>
                     </div>
