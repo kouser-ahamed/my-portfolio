@@ -104,7 +104,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-[80vh] items-start overflow-hidden bg-black pt-6 text-white md:pt-8">
+    <section className="relative flex min-h-[80vh] items-start overflow-hidden bg-black pt-14 text-white md:pt-16">
       {/* Ambient Background */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -143,7 +143,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="container relative z-10 mx-auto grid items-start justify-items-center gap-8 px-5 sm:px-8 lg:grid-cols-2 lg:px-20 py-6">
+      <div className="container relative z-10 mx-auto grid items-start justify-items-center gap-8 px-5 sm:px-8 lg:grid-cols-2 lg:px-20 py-14">
         {/* Left Side */}
         <motion.div
           variants={containerVariants}
@@ -322,9 +322,9 @@ export default function Hero() {
           className="relative flex justify-center self-start"
         >
           <motion.div
-            initial={{ y: -20 }}
+            initial={{ y: 0 }}
             animate={{
-              y: [-12, 12],
+              y: [0, 8],
             }}
             transition={{
               duration: 4,
