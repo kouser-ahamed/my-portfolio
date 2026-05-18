@@ -259,7 +259,7 @@ export default function Hero() {
             </MotionLink>
 
             <motion.a
-              href="https://drive.google.com/file/d/1huFpOhVeAc3EXD4uvvKbQxL4www9-CFt/view?usp=sharing"
+              href="https://drive.google.com/file/d/1mzONCBnP8KyCnSkUQRoPgwk42-9ZqH9B/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{
