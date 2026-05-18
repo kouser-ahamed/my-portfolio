@@ -140,7 +140,7 @@ export default function Navbar() {
                 );
               })}
               <motion.a
-                href="https://drive.google.com/file/d/1n2LhgxOIx6XL6rRq1rK4ou_B4iFH5J8d/view?usp=sharing"
+                href="https://drive.google.com/file/d/1huFpOhVeAc3EXD4uvvKbQxL4www9-CFt/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
