@@ -80,7 +80,7 @@ export default function Navbar() {
 
         {/* Desktop Resume Link */}
         <motion.a
-          href="https://drive.google.com/file/d/1mzONCBnP8KyCnSkUQRoPgwk42-9ZqH9B/view?usp=sharing"
+          href="https://drive.google.com/file/d/1reKOlvVcqH6bmrc9V5YUrX22YhpVc70g/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           initial={{ opacity: 0, x: 20 }}
@@ -140,7 +140,7 @@ export default function Navbar() {
                 );
               })}
               <motion.a
-                href="https://drive.google.com/file/d/1mzONCBnP8KyCnSkUQRoPgwk42-9ZqH9B/view?usp=sharing"
+                href="https://drive.google.com/file/d/1reKOlvVcqH6bmrc9V5YUrX22YhpVc70g/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.05 }}
