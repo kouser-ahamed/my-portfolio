@@ -6,7 +6,43 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const projects = [
-   {
+  {
+    title: "TurfCraft",
+
+    description:
+      "TTurfCraft is a full-stack sports facility booking platform that digitizes venue reservations.Users can browse facilities, book time slots, and manage bookings in real time.JWT-based authentication ensures secure access with protected routes.Facility owners can manage venues, pricing, and availability through a dashboard.",
+
+    images: [
+      "/assets/TurfCraft/img-1.png",
+      "/assets/TurfCraft/img-2.png",
+      "/assets/TurfCraft/img-3.png",
+      "/assets/TurfCraft/img-4.png",
+      "/assets/TurfCraft/img-5.png",
+      "/assets/TurfCraft/img-6.png",
+      "/assets/TurfCraft/img-7.png",
+      "/assets/TurfCraft/img-8.png",
+      "/assets/TurfCraft/img-9.png",
+    ],
+
+    tech: [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "HeroUI",
+      "Better Auth",
+      "JWT Authentication",
+      "MongoDB",
+      "Express.js",
+      "Node.js",
+      "React Toastify",
+      "React Icons",
+      "Swiper",
+    ],
+
+    live: "https://turfcraft.vercel.app",
+    github: "https://github.com/kouser-ahamed/turfcraft",
+  },
+  {
     title: "BinaryBooks",
     description:
       "A modern full-stack online book borrowing platform designed to provide users with a seamless digital library experience through smart book exploration, secure authentication, protected borrowing workflows, and responsive UI design.",
@@ -35,97 +71,95 @@ const projects = [
     live: "https://binary-books.vercel.app/",
     github: "https://github.com/kouser-ahamed/binary-books",
   },
-    {
-  title: "KeenKeeper",
+  {
+    title: "KeenKeeper",
 
-  description:
-    "A modern friendship-tracking web application designed to help users maintain meaningful personal relationships through smart communication tracking, interaction analytics, engagement monitoring, and responsive dashboard experiences.",
+    description:
+      "A modern friendship-tracking web application designed to help users maintain meaningful personal relationships through smart communication tracking, interaction analytics, engagement monitoring, and responsive dashboard experiences.",
 
-  images: [
-    "/assets/keen-keeper/p1.png",
-    "/assets/keen-keeper/p2.png",
-    "/assets/keen-keeper/p3.png",
-    "/assets/keen-keeper/p4.png",
-    "/assets/keen-keeper/p5.png",
-    "/assets/keen-keeper/p6.png",
-  ],
+    images: [
+      "/assets/keen-keeper/p1.png",
+      "/assets/keen-keeper/p2.png",
+      "/assets/keen-keeper/p3.png",
+      "/assets/keen-keeper/p4.png",
+      "/assets/keen-keeper/p5.png",
+      "/assets/keen-keeper/p6.png",
+    ],
 
-  tech: [
-    "React.js",
-    "React Router",
-    "Context API",
-    "Tailwind CSS",
-    "DaisyUI",
-    "Recharts",
-    "React Toastify",
-    "React Icons",
-    "React Spinners",
-  ],
+    tech: [
+      "React.js",
+      "React Router",
+      "Context API",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Recharts",
+      "React Toastify",
+      "React Icons",
+      "React Spinners",
+    ],
 
-  live: "https://superb-panda-c429ef-kouser.netlify.app/",
+    live: "https://superb-panda-c429ef-kouser.netlify.app/",
 
-  github: "https://github.com/kouser-ahamed/B13-A7-keen-keeper",
-},
-{
-  title: "GitHub Issues Tracker",
+    github: "https://github.com/kouser-ahamed/B13-A7-keen-keeper",
+  },
+  {
+    title: "GitHub Issues Tracker",
 
-  description:
-    "A responsive issue management web application inspired by GitHub, allowing users to track, filter, search, and explore issues through interactive cards, status indicators, and detailed modal-based issue views.",
+    description:
+      "A responsive issue management web application inspired by GitHub, allowing users to track, filter, search, and explore issues through interactive cards, status indicators, and detailed modal-based issue views.",
 
-  images: [
-    "/assets/GitHubIssuesPic/git-1.png",
-    "/assets/GitHubIssuesPic/git-2.png",
-    "/assets/GitHubIssuesPic/git-3.png",
-    "/assets/GitHubIssuesPic/git-4.png",
-  ],
+    images: [
+      "/assets/GitHubIssuesPic/git-1.png",
+      "/assets/GitHubIssuesPic/git-2.png",
+      "/assets/GitHubIssuesPic/git-3.png",
+      "/assets/GitHubIssuesPic/git-4.png",
+    ],
 
-  tech: [
-    "HTML5",
-    "JavaScript",
-    "Tailwind CSS",
-    "DaisyUI",
-    "Fetch API",
-    "Font Awesome",
-  ],
+    tech: [
+      "HTML5",
+      "JavaScript",
+      "Tailwind CSS",
+      "DaisyUI",
+      "Fetch API",
+      "Font Awesome",
+    ],
 
-  live: "https://github-issue-tracker-kouser.netlify.app/",
+    live: "https://github-issue-tracker-kouser.netlify.app/",
 
-  github:
-    "https://github.com/kouser-ahamed/B13-A5-Github-Issue-Tracker-Kouser",
-},
-{
-  title: "TechWave Podcast Website",
+    github:
+      "https://github.com/kouser-ahamed/B13-A5-Github-Issue-Tracker-Kouser",
+  },
+  {
+    title: "TechWave Podcast Website",
 
-  description:
-    "A modern and responsive podcast landing page designed to showcase technology-focused podcast content through visually engaging layouts, embedded video episodes, clean UI sections, and fully responsive user experience across all devices.",
+    description:
+      "A modern and responsive podcast landing page designed to showcase technology-focused podcast content through visually engaging layouts, embedded video episodes, clean UI sections, and fully responsive user experience across all devices.",
 
-  images: [
-    "/assets/TechWaveDemoPic/tech-1.png",
-    "/assets/TechWaveDemoPic/tech-2.png",
-    "/assets/TechWaveDemoPic/tech-3.png",
-    "/assets/TechWaveDemoPic/tech-4.png",
-    "/assets/TechWaveDemoPic/tech-5.png",
-  ],
+    images: [
+      "/assets/TechWaveDemoPic/tech-1.png",
+      "/assets/TechWaveDemoPic/tech-2.png",
+      "/assets/TechWaveDemoPic/tech-3.png",
+      "/assets/TechWaveDemoPic/tech-4.png",
+      "/assets/TechWaveDemoPic/tech-5.png",
+    ],
 
-  tech: [
-    "HTML5",
-    "CSS3",
-    "Flexbox",
-    "CSS Grid",
-    "Font Awesome",
-    "Google Fonts",
-  ],
+    tech: [
+      "HTML5",
+      "CSS3",
+      "Flexbox",
+      "CSS Grid",
+      "Font Awesome",
+      "Google Fonts",
+    ],
 
-  live: "https://kouser-ahamed.github.io/B13-A02-TechWave_Kouser/",
+    live: "https://kouser-ahamed.github.io/B13-A02-TechWave_Kouser/",
 
-  github: "https://github.com/kouser-ahamed/B13-A02-TechWave_Kouser",
-}
+    github: "https://github.com/kouser-ahamed/B13-A02-TechWave_Kouser",
+  },
 ];
 
 export default function Projects() {
-  const [currentImages, setCurrentImages] = useState(
-    projects.map(() => 0)
-  );
+  const [currentImages, setCurrentImages] = useState(projects.map(() => 0));
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -133,7 +167,7 @@ export default function Projects() {
         prev.map((imgIndex, projectIndex) => {
           const totalImages = projects[projectIndex].images.length;
           return (imgIndex + 1) % totalImages;
-        })
+        }),
       );
     }, 3500);
 
@@ -142,7 +176,6 @@ export default function Projects() {
 
   return (
     <section className="relative py-4 md:py-8 bg-[#040508] overflow-hidden text-white w-full">
-
       {/* Background Glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-[250px] sm:w-[300px] md:w-[500px] h-[250px] sm:h-[300px] md:h-[500px] bg-emerald-500/10 blur-[100px] md:blur-[120px] rounded-full" />
@@ -151,7 +184,6 @@ export default function Projects() {
 
       {/* Container */}
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
-
         {/* Header */}
         <div className="text-center mb-6 md:mb-10">
           <motion.h2
@@ -174,7 +206,6 @@ export default function Projects() {
 
         {/* Grid Container - allow full width on small screens */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start w-full">
-
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -192,7 +223,6 @@ export default function Projects() {
                          hover:shadow-[0_20px_80px_rgba(34,211,238,0.14)]
                          transition-all duration-500 w-full box-border"
             >
-
               {/* Premium Glow */}
               <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-700 pointer-events-none">
                 <div
@@ -207,7 +237,6 @@ export default function Projects() {
 
               {/* Image Section */}
               <div className="relative aspect-[16/9] w-full overflow-hidden bg-[#0b0d11]">
-
                 <AnimatePresence initial={false}>
                   <motion.div
                     key={currentImages[index]}
@@ -262,8 +291,7 @@ export default function Projects() {
                     <motion.div
                       key={imgIndex}
                       animate={{
-                        width:
-                          currentImages[index] === imgIndex ? 20 : 6,
+                        width: currentImages[index] === imgIndex ? 20 : 6,
                       }}
                       className={`h-1.5 rounded-full transition-all duration-300 ${
                         currentImages[index] === imgIndex
@@ -273,12 +301,10 @@ export default function Projects() {
                     />
                   ))}
                 </div>
-
               </div>
 
               {/* Content Section - Adjusted Padding for Screen Safety */}
               <div className="relative z-10 p-4 sm:p-5 md:p-5 lg:p-6 box-border">
-
                 {/* Title */}
                 <h3 className="text-xl sm:text-2xl font-bold mb-3 group-hover:text-cyan-300 transition-colors duration-300">
                   {project.title}
@@ -312,7 +338,6 @@ export default function Projects() {
 
                 {/* Buttons - Properly stacking on extra-small mobile screens */}
                 <div className="flex flex-col sm:flex-row gap-3 w-full">
-
                   {/* Live Preview */}
                   <a
                     href={project.live}
@@ -356,14 +381,11 @@ export default function Projects() {
                       <FiGithub size={16} />
                       Source Code
                     </motion.button>
-                  </a>  
-
+                  </a>
                 </div>
               </div>
-
             </motion.div>
           ))}
-
         </div>
       </div>
     </section>
