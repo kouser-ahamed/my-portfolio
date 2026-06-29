@@ -10,7 +10,7 @@ const projects = [
     title: "GymNest",
 
     description:
-      "GymNest is a full-stack Fitness & Gym Management Platform with role-based dashboards for Members, Trainers, and Admins. Members can browse, search, and book fitness classes via Stripe Checkout, save favorites, apply as trainers, and participate in a community forum with likes, comments, and replies. Trainers can create and manage classes, view enrolled students, and publish forum posts. Admins have full platform control — managing users with soft-block enforcement, approving or rejecting trainer applications with feedback, moderating classes and forum content, and viewing all Stripe transaction histories. Built with Better Auth and JWT stored in HTTPOnly Cookie for secure authentication, MongoDB search and filter, server-side pagination, Recharts analytics, Framer Motion animations, and dark/light theme support.",
+      "GymNest is a full-stack Fitness & Gym Management Platform with role-based dashboards for Members, Trainers, and Admins. Members can browse and book classes via Stripe, save favorites, and join the community forum. Trainers manage classes and publish posts. Admins control users, approvals, transactions, and content moderation. Built with Better Auth, JWT HTTPOnly Cookie, MongoDB, Stripe, Recharts, and Framer Motion.",
 
     images: [
       "/assets/GymNest/i1.png",
