@@ -7,6 +7,54 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 
 const projects = [
   {
+    title: "GymNest",
+
+    description:
+      "GymNest is a full-stack Fitness & Gym Management Platform with role-based dashboards for Members, Trainers, and Admins. Members can browse, search, and book fitness classes via Stripe Checkout, save favorites, apply as trainers, and participate in a community forum with likes, comments, and replies. Trainers can create and manage classes, view enrolled students, and publish forum posts. Admins have full platform control — managing users with soft-block enforcement, approving or rejecting trainer applications with feedback, moderating classes and forum content, and viewing all Stripe transaction histories. Built with Better Auth and JWT stored in HTTPOnly Cookie for secure authentication, MongoDB search and filter, server-side pagination, Recharts analytics, Framer Motion animations, and dark/light theme support.",
+
+    images: [
+      "/assets/GymNest/i1.png",
+      "/assets/GymNest/i2.png",
+      "/assets/GymNest/i3.png",
+      "/assets/GymNest/i4.png",
+      "/assets/GymNest/i5.png",
+      "/assets/GymNest/i6.png",
+      "/assets/GymNest/i7.png",
+      "/assets/GymNest/i8.png",
+      "/assets/GymNest/i9.png",
+      "/assets/GymNest/i10.png",
+      "/assets/GymNest/i11.png",
+      "/assets/GymNest/i12.png",
+      "/assets/GymNest/i13.png",
+      "/assets/GymNest/i14.png",
+      "/assets/GymNest/i15.png",
+      "/assets/GymNest/i16.png",
+      "/assets/GymNest/i17.png",
+      
+    ],
+
+    tech: [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "HeroUI",
+      "Better Auth",
+      "JWT Authentication",
+      "MongoDB",
+      "Express.js",
+      "Node.js",
+      "Stripe",
+      "Recharts",
+      "Framer Motion",
+      "React Toastify",
+      "Gravity UI Icons",
+      "Swiper",
+    ],
+
+    live: "https://gymnest-client-k88v.vercel.app",
+    github: "https://github.com/kouser-ahamed/gymnest-client",
+  },
+  {
     title: "TurfCraft",
 
     description:
