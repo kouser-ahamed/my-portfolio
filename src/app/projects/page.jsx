@@ -47,7 +47,6 @@ const projects = [
       "Recharts",
       "Framer Motion",
       "React Toastify",
-      "Gravity UI Icons",
       "Swiper",
     ],
 
