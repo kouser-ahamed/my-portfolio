@@ -276,7 +276,7 @@ export default function Hero() {
             </MotionLink>
 
             <motion.a
-              href="https://drive.google.com/file/d/1reKOlvVcqH6bmrc9V5YUrX22YhpVc70g/view?usp=sharing"
+              href="https://drive.google.com/file/d/1xxupwdPETHo-NA4hVYtlz10-znilHhIi/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{
