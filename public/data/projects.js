@@ -5,60 +5,224 @@
 // To add a new project, just push a new object here — every page updates automatically.
 
 export const projects = [
+  // {
+  //   slug: "gymnest",
+  //   title: "GymNest",
+  //   description:
+  //     "GymNest is a full-stack Fitness & Gym Management Platform with role-based dashboards for Members, Trainers, and Admins. Members can browse and book classes via Stripe, save favorites, and join the community forum. Trainers manage classes and publish posts. Admins control users, approvals, transactions, and content moderation.",
+  //   images: [
+  //     "/assets/GymNest/i1.png",
+  //     "/assets/GymNest/i2.png",
+  //     "/assets/GymNest/i3.png",
+  //     "/assets/GymNest/i4.png",
+  //     "/assets/GymNest/i5.png",
+  //     "/assets/GymNest/i6.png",
+  //     "/assets/GymNest/i7.png",
+  //     "/assets/GymNest/i8.png",
+  //     "/assets/GymNest/i9.png",
+  //     "/assets/GymNest/i10.png",
+  //     "/assets/GymNest/i11.png",
+  //     "/assets/GymNest/i12.png",
+  //     "/assets/GymNest/i13.png",
+  //     "/assets/GymNest/i14.png",
+  //     "/assets/GymNest/i15.png",
+  //     "/assets/GymNest/i16.png",
+  //     "/assets/GymNest/i17.png",
+  //   ],
+  //   mainTech: ["Next.js", "React.js", "Node.js", "MongoDB"],
+  //   tech: [
+  //     "Next.js",
+  //     "React.js",
+  //     "Node.js",
+  //     "Express.js",
+  //     "MongoDB",
+  //     "Tailwind CSS",
+  //     "HeroUI",
+  //     "Better Auth",
+  //     "JWT Authentication",
+  //     "Stripe",
+  //     "Recharts",
+  //     "Framer Motion",
+  //     "React Toastify",
+  //     "Swiper",
+  //   ],
+  //   live: "https://gymnest-client-k88v.vercel.app",
+  //   github: "https://github.com/kouser-ahamed/gymnest-client",
+  //   challenges: [
+  //     "Designing a single data model that could serve three very different dashboards (Member, Trainer, Admin) without duplicating logic or leaking permissions between roles.",
+  //     "Keeping Stripe payment state, class capacity, and booking status in sync in real time so a class never gets over-booked.",
+  //     "Building a moderation workflow so admins could approve trainer content and transactions without slowing down the day-to-day experience for members.",
+  //   ],
+  //   futurePlans: [
+  //     "Add a native mobile companion app for quick class check-ins.",
+  //     "Introduce recurring/subscription-based membership billing on top of the current one-off Stripe payments.",
+  //     "Add attendance analytics so trainers can see engagement trends per class.",
+  //   ],
+  // },
+
+
   {
-    slug: "gymnest",
-    title: "GymNest",
-    description:
-      "GymNest is a full-stack Fitness & Gym Management Platform with role-based dashboards for Members, Trainers, and Admins. Members can browse and book classes via Stripe, save favorites, and join the community forum. Trainers manage classes and publish posts. Admins control users, approvals, transactions, and content moderation.",
-    images: [
-      "/assets/GymNest/i1.png",
-      "/assets/GymNest/i2.png",
-      "/assets/GymNest/i3.png",
-      "/assets/GymNest/i4.png",
-      "/assets/GymNest/i5.png",
-      "/assets/GymNest/i6.png",
-      "/assets/GymNest/i7.png",
-      "/assets/GymNest/i8.png",
-      "/assets/GymNest/i9.png",
-      "/assets/GymNest/i10.png",
-      "/assets/GymNest/i11.png",
-      "/assets/GymNest/i12.png",
-      "/assets/GymNest/i13.png",
-      "/assets/GymNest/i14.png",
-      "/assets/GymNest/i15.png",
-      "/assets/GymNest/i16.png",
-      "/assets/GymNest/i17.png",
-    ],
-    mainTech: ["Next.js", "React.js", "Node.js", "MongoDB"],
-    tech: [
-      "Next.js",
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Tailwind CSS",
-      "HeroUI",
-      "Better Auth",
-      "JWT Authentication",
-      "Stripe",
-      "Recharts",
-      "Framer Motion",
-      "React Toastify",
-      "Swiper",
-    ],
-    live: "https://gymnest-client-k88v.vercel.app",
-    github: "https://github.com/kouser-ahamed/gymnest-client",
-    challenges: [
-      "Designing a single data model that could serve three very different dashboards (Member, Trainer, Admin) without duplicating logic or leaking permissions between roles.",
-      "Keeping Stripe payment state, class capacity, and booking status in sync in real time so a class never gets over-booked.",
-      "Building a moderation workflow so admins could approve trainer content and transactions without slowing down the day-to-day experience for members.",
-    ],
-    futurePlans: [
-      "Add a native mobile companion app for quick class check-ins.",
-      "Introduce recurring/subscription-based membership billing on top of the current one-off Stripe payments.",
-      "Add attendance analytics so trainers can see engagement trends per class.",
-    ],
-  },
+  slug: "gymnest",
+  title: "GymNest",
+
+  description:
+    "GymNest is a full-stack Fitness and Gym Management Platform designed for Members, Trainers, and Administrators. Members can discover and filter fitness classes, complete secure bookings through Stripe, manage favorites, apply to become trainers, and participate in a community forum. Trainers can create and manage classes, monitor enrolled students, and publish community content. Administrators can manage users, trainer applications, class approvals, payment transactions, account restrictions, analytics, and platform-wide content moderation through a secure role-based dashboard.",
+
+  images: [
+    "/assets/GymNest/i1.png",
+    "/assets/GymNest/i2.png",
+    "/assets/GymNest/i3.png",
+    "/assets/GymNest/i4.png",
+    "/assets/GymNest/i5.png",
+    "/assets/GymNest/i6.png",
+    "/assets/GymNest/i7.png",
+    "/assets/GymNest/i8.png",
+    "/assets/GymNest/i9.png",
+    "/assets/GymNest/i10.png",
+    "/assets/GymNest/i11.png",
+    "/assets/GymNest/i12.png",
+    "/assets/GymNest/i13.png",
+    "/assets/GymNest/i14.png",
+    "/assets/GymNest/i15.png",
+    "/assets/GymNest/i16.png",
+    "/assets/GymNest/i17.png",
+  ],
+
+  mainTech: [
+    "Next.js",
+    "React.js",
+    "Node.js",
+    "MongoDB",
+  ],
+
+  tech: [
+    "Next.js",
+    "React.js",
+    "JavaScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "HeroUI",
+    "Better Auth",
+    "Google OAuth",
+    "JWT Authentication",
+    "HTTPOnly Cookies",
+    "Stripe",
+    "Recharts",
+    "Framer Motion",
+    "React Toastify",
+    "Swiper",
+    "ImgBB",
+    "Vercel",
+  ],
+
+  live: "https://gymnest-client-k88v.vercel.app",
+
+  github:
+    "https://github.com/kouser-ahamed/gymnest-client",
+
+  challenges: [
+    "Designing a secure role-based architecture for Members, Trainers, and Administrators while keeping dashboard access, API permissions, user-role changes, and account restrictions synchronized across the frontend and backend.",
+
+    "Integrating Stripe payments with class booking while preventing duplicate bookings and ensuring that successful payment records, booking information, class details, and transaction history remained consistent in MongoDB.",
+
+    "Building a complete trainer lifecycle where members can apply, administrators can approve or reject applications with feedback, approved trainers can create classes, and submitted classes remain unavailable publicly until administrator approval.",
+
+    "Implementing a soft-block system that allows restricted users to continue browsing the platform while preventing every state-changing action through both frontend validation and secure backend authorization.",
+
+    "Developing an interactive community forum with posts, likes, dislikes, comments, replies, editing, deletion, ownership validation, pagination, and administrator moderation without compromising performance or data integrity.",
+  ],
+
+  futurePlans: [
+    "Introduce recurring membership subscriptions and multiple pricing plans in addition to the current one-time Stripe class booking system.",
+
+    "Add trainer availability calendars, live class schedules, attendance tracking, QR-based check-ins, and automated booking reminders for members.",
+
+    "Develop richer analytics dashboards for administrators and trainers, including revenue trends, class popularity, attendance rates, member engagement, and trainer performance.",
+
+    "Add real-time notifications for bookings, trainer application updates, class approvals, comments, replies, and administrative actions.",
+
+    "Improve the platform with automated testing, centralized error monitoring, API documentation, stronger form validation, accessibility enhancements, and performance optimization.",
+
+    "Create a mobile companion application so members can browse classes, receive reminders, manage bookings, and check in to sessions more conveniently.",
+  ],
+},
+  {
+  slug: "sebasathi-ai",
+  title: "SebaSathi AI",
+  description:
+    "SebaSathi AI is a full-stack AI-powered healthcare assistance and doctor appointment platform designed for Patients, Doctors, and Administrators. Patients can discover doctors, request appointments, submit reviews, communicate with an AI Health Assistant in Bangla, Banglish, or English, save conversation history, and generate structured health summaries. Doctors can manage appointment-related activities, while administrators can manage users, create doctor accounts, control account status, and oversee platform operations through secure role-based dashboards.",
+
+  images: [
+    "/assets/SebaSathiAI/UI/1.png",
+    "/assets/SebaSathiAI/UI/2.png",
+    "/assets/SebaSathiAI/UI/3.png",
+    "/assets/SebaSathiAI/UI/4.png",
+    "/assets/SebaSathiAI/UI/5.png",
+    "/assets/SebaSathiAI/UI/6.png",
+    "/assets/SebaSathiAI/UI/7.png",
+    "/assets/SebaSathiAI/UI/8.png",
+    "/assets/SebaSathiAI/UI/9.png",
+    "/assets/SebaSathiAI/UI/10.png",
+    "/assets/SebaSathiAI/UI/11.png",
+    "/assets/SebaSathiAI/UI/12.png",
+    "/assets/SebaSathiAI/UI/13.png",
+    "/assets/SebaSathiAI/UI/14.png",
+  ],
+
+  mainTech: [
+    "Next.js",
+    "TypeScript",
+    "Node.js",
+    "MongoDB",
+  ],
+
+  tech: [
+    "Next.js 16",
+    "React.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "HeroUI",
+    "Better Auth",
+    "Google OAuth",
+    "JWT Authentication",
+    "JOSE / JWKS",
+    "Groq API",
+    "Framer Motion",
+    "React Icons",
+    "React Toastify",
+    "Vercel",
+  ],
+
+  live: "https://sebasathiai-frontend.vercel.app",
+
+  github:
+    "https://github.com/kouser-ahamed/sebasathiai-frontend",
+
+  challenges: [
+    "Implementing secure role-based authentication and authorization for Patients, Doctors, and Administrators while keeping frontend sessions, Better Auth, backend JWT verification, user roles, and account status synchronized.",
+
+    "Building a multilingual AI Health Assistant that supports Bangla, Banglish, and English, streams responses in real time, preserves conversation context, stores user-specific chat history, and generates structured health summaries safely.",
+
+    "Designing connected workflows for doctor discovery, appointment requests, reviews, doctor account creation, and account-status management without exposing protected operations or allowing unauthorized roles to access restricted features.",
+
+    "Integrating the independently deployed Next.js frontend and Express backend while correctly handling authentication cookies, CORS, callback URLs, protected API requests, database records, and production environment variables.",
+  ],
+
+  futurePlans: [
+    "Refactor the current backend into separate routes, controllers, services, middleware, validation schemas, database utilities, and AI service modules for improved scalability and maintainability.",
+
+    "Add real-time appointment notifications, doctor availability schedules, appointment reminders, rescheduling, cancellation workflows, and email or in-app updates for patients and doctors.",
+
+    "Improve the AI Health Assistant with more advanced health-history analysis, downloadable health reports, stronger safety controls, better emergency detection, and clearer doctor-specialization recommendations.",
+
+    "Add automated testing, centralized error monitoring, API documentation, analytics dashboards, and stronger validation to improve production reliability and development quality.",
+  ],
+},
   {
     slug: "turfcraft",
     title: "TurfCraft",
