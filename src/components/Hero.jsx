@@ -14,19 +14,31 @@ import { FaFacebookF } from "react-icons/fa";
 const rotatingTitles = [
   "B.Sc. in Computer Science & Engineering",
   "Full-Stack Web Developer",
-  "Building Modern & Scalable Web Applications",
+  "MERN Stack Developer @ CodeOnix",
 ];
 
+// Main/most-used stack first, on request: Next.js, React, JavaScript,
+// TypeScript, Node.js, MongoDB, Mongoose — then the rest.
 const techStack = [
+  {
+    name: "Next.js",
+    color: "text-purple-400",
+    gradient: "from-purple-500/20 to-purple-600/5",
+  },
   {
     name: "React",
     color: "text-blue-400",
     gradient: "from-blue-500/20 to-blue-600/5",
   },
   {
-    name: "Next.js",
-    color: "text-purple-400",
-    gradient: "from-purple-500/20 to-purple-600/5",
+    name: "JavaScript",
+    color: "text-yellow-400",
+    gradient: "from-yellow-500/20 to-yellow-600/5",
+  },
+  {
+    name: "TypeScript",
+    color: "text-blue-300",
+    gradient: "from-blue-400/20 to-blue-500/5",
   },
   {
     name: "Node.js",
@@ -34,14 +46,19 @@ const techStack = [
     gradient: "from-green-500/20 to-green-600/5",
   },
   {
-    name: "Express",
-    color: "text-zinc-300",
-    gradient: "from-zinc-500/20 to-zinc-600/5",
-  },
-  {
     name: "MongoDB",
     color: "text-emerald-400",
     gradient: "from-emerald-500/20 to-emerald-600/5",
+  },
+  {
+    name: "Mongoose",
+    color: "text-red-400",
+    gradient: "from-red-500/20 to-red-600/5",
+  },
+  {
+    name: "Express",
+    color: "text-zinc-300",
+    gradient: "from-zinc-500/20 to-zinc-600/5",
   },
   {
     name: "REST APIs",

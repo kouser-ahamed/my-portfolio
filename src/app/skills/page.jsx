@@ -5,6 +5,7 @@ import {
   SiNextdotjs,
   SiTailwindcss,
   SiJavascript,
+  SiTypescript,
   SiNodedotjs,
   SiExpress,
   SiMongodb,
@@ -23,6 +24,8 @@ import {
   FiGrid,
 } from "react-icons/fi";
 
+// Order below is intentional: primary/most-used stack first (Next.js, React,
+// JavaScript, TypeScript, Node.js, MongoDB, Mongoose), everything else after.
 const skillCategories = [
   {
     title: "Frontend Engineering",
@@ -30,10 +33,11 @@ const skillCategories = [
     gradient: "from-cyan-500/20 via-blue-500/10 to-transparent",
     borderColor: "group-hover:border-cyan-500/50",
     skills: [
-      { name: "React.js", icon: SiReact, color: "text-cyan-400", bg: "bg-cyan-500/10" },
       { name: "Next.js", icon: SiNextdotjs, color: "text-white", bg: "bg-white/10" },
-      { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-teal-400", bg: "bg-teal-500/10" },
+      { name: "React.js", icon: SiReact, color: "text-cyan-400", bg: "bg-cyan-500/10" },
       { name: "JavaScript", icon: SiJavascript, color: "text-yellow-400", bg: "bg-yellow-500/10" },
+      { name: "TypeScript", icon: SiTypescript, color: "text-blue-400", bg: "bg-blue-500/10" },
+      { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-teal-400", bg: "bg-teal-500/10" },
     ],
   },
   {
@@ -44,6 +48,7 @@ const skillCategories = [
     skills: [
       { name: "Node.js", icon: SiNodedotjs, color: "text-green-500", bg: "bg-green-500/10" },
       { name: "Express.js", icon: SiExpress, color: "text-gray-300", bg: "bg-gray-500/10" },
+      { name: "Mongoose", icon: FiDatabase, color: "text-red-400", bg: "bg-red-500/10" },
       { name: "REST APIs", icon: FiServer, color: "text-blue-400", bg: "bg-blue-500/10" },
       { name: "Authentication", icon: FiLock, color: "text-purple-400", bg: "bg-purple-500/10" },
     ],
@@ -83,7 +88,7 @@ const stats = [
 export default function Skills() {
   return (
     <section className="relative py-15 bg-black overflow-hidden">
-      
+
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#0a0a0a_1px,transparent_1px),linear-gradient(to_bottom,#0a0a0a_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
@@ -106,7 +111,7 @@ export default function Skills() {
       </div>
 
       <div className="container relative z-10 mx-auto px-6 lg:px-20">
-        
+
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -127,7 +132,7 @@ export default function Skills() {
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
             Skills & <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text text-transparent">Technologies</span>
           </h2>
-          
+
           <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
             Passionate about building scalable, high-performance and visually refined web applications using modern technologies.
           </p>
@@ -146,13 +151,13 @@ export default function Skills() {
             >
               {/* Card Container */}
               <div className="relative h-full p-8 rounded-3xl bg-white/[0.02] border border-white/10 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-white/20">
-                
+
                 {/* Gradient Overlay */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${category.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
 
                 {/* Content */}
                 <div className="relative z-10">
-                  
+
                   {/* Header */}
                   <div className="flex items-start justify-between mb-8">
                     <div>
@@ -163,7 +168,7 @@ export default function Skills() {
                         {category.description}
                       </p>
                     </div>
-                    
+
                     <motion.div
                       whileHover={{ rotate: 45 }}
                       className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-400 group-hover:text-emerald-400 group-hover:border-emerald-500/30 transition-all"
@@ -174,33 +179,38 @@ export default function Skills() {
 
                   {/* Skills Grid */}
                   <div className="grid grid-cols-2 gap-4">
-                    {category.skills.map((skill, i) => (
-                      <motion.div
-                        key={skill.name}
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: idx * 0.1 + i * 0.05 }}
-                        viewport={{ once: true }}
-                        whileHover={{ y: -5, scale: 1.02 }}
-                        className="relative group/card"
-                      >
-                        <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300 text-center">
-                          
-                          {/* Icon Container */}
-                          <div className={`w-14 h-14 rounded-xl ${skill.bg} border border-white/10 flex items-center justify-center mb-4 mx-auto group-hover/card:scale-110 transition-transform`}>
-                            <skill.icon className={`text-2xl ${skill.color}`} />
+                    {category.skills.map((skill, i) => {
+                      const isLastOdd =
+                        category.skills.length % 2 === 1 &&
+                        i === category.skills.length - 1;
+                      return (
+                        <motion.div
+                          key={skill.name}
+                          initial={{ opacity: 0, scale: 0.8 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ delay: idx * 0.1 + i * 0.05 }}
+                          viewport={{ once: true }}
+                          whileHover={{ y: -5, scale: 1.02 }}
+                          className={`relative group/card ${isLastOdd ? "col-span-2 sm:col-span-1 sm:justify-self-center sm:w-1/2" : ""}`}
+                        >
+                          <div className="p-5 rounded-2xl bg-white/[0.02] border border-white/10 backdrop-blur-sm hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300 text-center">
+
+                            {/* Icon Container */}
+                            <div className={`w-14 h-14 rounded-xl ${skill.bg} border border-white/10 flex items-center justify-center mb-4 mx-auto group-hover/card:scale-110 transition-transform`}>
+                              <skill.icon className={`text-2xl ${skill.color}`} />
+                            </div>
+
+                            {/* Skill Name */}
+                            <span className="text-sm font-semibold text-gray-300 group-hover/card:text-white transition-colors">
+                              {skill.name}
+                            </span>
+
+                            {/* Hover Glow */}
+                            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity pointer-events-none" />
                           </div>
-
-                          {/* Skill Name */}
-                          <span className="text-sm font-semibold text-gray-300 group-hover/card:text-white transition-colors">
-                            {skill.name}
-                          </span>
-
-                          {/* Hover Glow */}
-                          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity pointer-events-none" />
-                        </div>
-                      </motion.div>
-                    ))}
+                        </motion.div>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -226,7 +236,7 @@ export default function Skills() {
               className="group relative"
             >
               <div className="relative p-10 rounded-3xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-xl overflow-hidden">
-                
+
                 {/* Gradient Glow */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${stat.color} opacity-0 group-hover:opacity-20 transition-opacity duration-500`} />
 
