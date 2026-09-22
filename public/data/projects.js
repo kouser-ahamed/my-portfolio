@@ -148,6 +148,87 @@ export const projects = [
     "Create a mobile companion application so members can browse classes, receive reminders, manage bookings, and check in to sessions more conveniently.",
   ],
 },
+{
+  slug: "sharebite",
+  title: "ShareBite",
+
+  description:
+    "ShareBite is a full-stack Community Surplus Food-Sharing Platform that connects people who have safe surplus food with nearby people who can use it. Users can publish available food with category, preparation and expiry dates, halal status, and pickup location. Other users can browse, search, and request food, while owners review incoming requests, approve one requester, reject the rest, and share pickup details through a respectful, transparent approval workflow.",
+
+  images: [
+    "/assets/ShareBite/1.png",
+    "/assets/ShareBite/2.png",
+    "/assets/ShareBite/3.png",
+    "/assets/ShareBite/4.png",
+    "/assets/ShareBite/5.png",
+    "/assets/ShareBite/6.png",
+    "/assets/ShareBite/7.png",
+    "/assets/ShareBite/8.png",
+    "/assets/ShareBite/9.png",
+    "/assets/ShareBite/10.png",
+    "/assets/ShareBite/11.png",
+    "/assets/ShareBite/12.png",
+    "/assets/ShareBite/13.png",
+    "/assets/ShareBite/14.png",
+    "/assets/ShareBite/15.png",
+  ],
+
+  mainTech: [
+    "Next.js",
+    "React.js",
+    "Node.js",
+    "MongoDB",
+  ],
+
+  tech: [
+    "Next.js",
+    "React.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "MongoDB Atlas",
+    "Tailwind CSS",
+    "HeroUI",
+    "Better Auth",
+    "Google OAuth",
+    "JWT Authentication",
+    "JOSE",
+    "CORS",
+    "React Icons",
+    "Vercel",
+  ],
+
+  live: "https://sharebite-frontend-silk.vercel.app",
+
+  github: "https://github.com/kouser-ahamed/sharebite-frontend",
+
+  challenges: [
+    "Designing a complete food-request lifecycle where a single approval automatically rejects all other pending requests for the same food while keeping the food's status synchronized between 'available' and 'booked' across the frontend and backend.",
+
+    "Implementing secure JWT-based authorization on top of Better Auth sessions, where the frontend generates a token after login and the Express backend independently verifies it with JOSE before allowing any protected food or request operation.",
+
+    "Enforcing strict ownership rules so that only a food's owner can manage its incoming requests and only a requester can manage their own submitted requests, validated on the backend rather than trusted from the frontend alone.",
+
+    "Preventing duplicate or invalid food requests and safely handling invalid MongoDB document IDs across all food and request-related API routes.",
+
+    "Building a responsive, filterable food discovery experience with search, sorting, and pagination while ensuring unavailable or already-booked food never appears in public listing pages.",
+  ],
+
+  futurePlans: [
+    "Add real-time notifications for new requests, approvals, rejections, and pickup updates using sockets or push notifications.",
+
+    "Introduce a rating and feedback system so requesters and food owners can review each other after a completed pickup.",
+
+    "Add location-based discovery with maps and distance filtering so users can find nearby available food more easily.",
+
+    "Build an admin dashboard for monitoring reported posts, resolving disputes, and moderating platform-wide activity.",
+
+    "Add multi-image upload per food post and richer food categorization with dietary tags beyond halal status.",
+
+    "Develop a mobile-friendly PWA experience so users can browse, request, and manage food listings on the go.",
+  ],
+},
   {
   slug: "sebasathi-ai",
   title: "SebaSathi AI",
