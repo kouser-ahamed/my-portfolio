@@ -840,43 +840,67 @@ export default function ProjectDetailPage() {
             duration: 0.5,
             delay: 0.15,
           }}
-          className="mb-12 flex max-w-md flex-col gap-3 sm:mb-14 sm:flex-row"
+          className="mb-12 flex max-w-2xl flex-col gap-3 sm:mb-14 sm:flex-row sm:flex-wrap"
         >
-          <motion.a
-            href={project.live}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{
-              scale: 1.02,
-              y: -2,
-            }}
-            whileTap={{
-              scale: 0.97,
-            }}
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-emerald-400 to-cyan-500 px-5 py-3 text-sm font-bold text-black shadow-[0_10px_30px_rgba(16,185,129,0.25)] transition-shadow duration-300 hover:shadow-[0_14px_36px_rgba(16,185,129,0.38)] sm:text-base"
-          >
-            <FiExternalLink size={16} />
+          {project.live && (
+            <motion.a
+              href={project.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{
+                scale: 1.02,
+                y: -2,
+              }}
+              whileTap={{
+                scale: 0.97,
+              }}
+              className="flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-xl bg-gradient-to-r from-emerald-400 to-cyan-500 px-5 py-3 text-sm font-bold text-black shadow-[0_10px_30px_rgba(16,185,129,0.25)] transition-shadow duration-300 hover:shadow-[0_14px_36px_rgba(16,185,129,0.38)] sm:text-base"
+            >
+              <FiExternalLink size={16} />
 
-            Live Preview
-          </motion.a>
+              Live Preview
+            </motion.a>
+          )}
 
-          <motion.a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{
-              scale: 1.02,
-              y: -2,
-            }}
-            whileTap={{
-              scale: 0.97,
-            }}
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/[0.05] px-5 py-3 text-sm font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/30 hover:bg-white/[0.09] sm:text-base"
-          >
-            <FiGithub size={16} />
+          {project.github && (
+            <motion.a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{
+                scale: 1.02,
+                y: -2,
+              }}
+              whileTap={{
+                scale: 0.97,
+              }}
+              className="flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-white/10 bg-white/[0.05] px-5 py-3 text-sm font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/30 hover:bg-white/[0.09] sm:text-base"
+            >
+              <FiGithub size={16} />
 
-            Source Code
-          </motion.a>
+              Source Code Client
+            </motion.a>
+          )}
+
+          {project.githubBackend && (
+            <motion.a
+              href={project.githubBackend}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{
+                scale: 1.02,
+                y: -2,
+              }}
+              whileTap={{
+                scale: 0.97,
+              }}
+              className="flex flex-1 items-center justify-center gap-2 whitespace-nowrap rounded-xl border border-white/10 bg-white/[0.05] px-5 py-3 text-sm font-semibold text-white backdrop-blur-xl transition-all duration-300 hover:border-emerald-400/30 hover:bg-white/[0.09] sm:text-base"
+            >
+              <FiGithub size={16} />
+
+              Source Code Server
+            </motion.a>
+          )}
         </motion.div>
 
         {/* Tech Stack */}

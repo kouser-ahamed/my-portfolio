@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { FiBriefcase, FiExternalLink, FiLinkedin } from "react-icons/fi";
-import { SiTypescript, SiMongoose } from "react-icons/si";
+import { SiPrisma, SiNestjs } from "react-icons/si";
 import { cn } from "@/lib/utils";
 
 // NOTE: double-check the exact spelling of the company name below (CodeOnix)
@@ -11,10 +11,9 @@ import { cn } from "@/lib/utils";
 // below builds itself from this data, same pattern as the Education page.
 const experienceData = [
   {
-    duration: "July 2026 – Present",
-    joinDate: "Joined July 7, 2026",
-    status: "Currently Working",
-    role: "MERN Stack Developer",
+    duration: "27 June 2026 – 26 September 2026",
+    status: "Internship",
+    role: "MERN Stack Developer (Intern)",
     company: "CodeOnix",
     companyLink: "https://www.codeonix.tech/portfolio",
     linkedin: "https://www.linkedin.com/company/codeonix-software/people",
@@ -27,8 +26,8 @@ const experienceData = [
       "Writing clean, maintainable, and reusable code following modern best practices.",
     ],
     currentlyLearning: [
-      { name: "TypeScript", Icon: SiTypescript, color: "text-blue-400", bg: "bg-blue-500/10" },
-      { name: "Mongoose", Icon: SiMongoose, color: "text-red-400", bg: "bg-red-500/10" },
+      { name: "Prisma ORM", Icon: SiPrisma, color: "text-teal-400", bg: "bg-teal-500/10" },
+      { name: "NestJS", Icon: SiNestjs, color: "text-red-400", bg: "bg-red-500/10" },
     ],
     side: "right",
   },

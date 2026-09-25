@@ -122,6 +122,9 @@ export const projects = [
   github:
     "https://github.com/kouser-ahamed/gymnest-client",
 
+  githubBackend:
+    "https://github.com/kouser-ahamed/gymnest-server",
+
   challenges: [
     "Designing a secure role-based architecture for Members, Trainers, and Administrators while keeping dashboard access, API permissions, user-role changes, and account restrictions synchronized across the frontend and backend.",
 
@@ -202,6 +205,8 @@ export const projects = [
   live: "https://sharebite-frontend-silk.vercel.app",
 
   github: "https://github.com/kouser-ahamed/sharebite-frontend",
+
+  githubBackend: "https://github.com/kouser-ahamed/sharebite-backend",
 
   challenges: [
     "Designing a complete food-request lifecycle where a single approval automatically rejects all other pending requests for the same food while keeping the food's status synchronized between 'available' and 'booked' across the frontend and backend.",
@@ -284,6 +289,9 @@ export const projects = [
   github:
     "https://github.com/kouser-ahamed/sebasathiai-frontend",
 
+  githubBackend:
+    "https://github.com/kouser-ahamed/sebasathiai-backend",
+
   challenges: [
     "Implementing secure role-based authentication and authorization for Patients, Doctors, and Administrators while keeping frontend sessions, Better Auth, backend JWT verification, user roles, and account status synchronized.",
 
@@ -337,6 +345,7 @@ export const projects = [
     ],
     live: "https://turfcraft.vercel.app",
     github: "https://github.com/kouser-ahamed/turfcraft",
+    githubBackend: "https://github.com/kouser-ahamed/turfcraft-server",
     challenges: [
       "Preventing double-booking of the same turf and time slot when multiple users try to book concurrently.",
       "Modeling flexible pricing that changes by time slot, day, and facility without over-complicating the schema.",
