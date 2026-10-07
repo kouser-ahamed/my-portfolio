@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiBriefcase, FiExternalLink, FiLinkedin } from "react-icons/fi";
+import { FiBriefcase, FiExternalLink, FiLinkedin, FiAward } from "react-icons/fi";
 import { SiPrisma, SiNestjs } from "react-icons/si";
 import { cn } from "@/lib/utils";
 
@@ -17,6 +17,8 @@ const experienceData = [
     company: "CodeOnix",
     companyLink: "https://www.codeonix.tech/portfolio",
     linkedin: "https://www.linkedin.com/company/codeonix-software/people",
+    certificateLink:
+      "https://drive.google.com/file/d/167bBZTFJbWvpHfD6ffT4s16HdvgmPT4O/view?usp=sharing",
     description:
       "Working as a MERN Stack Developer, building and maintaining full-stack web applications with the MERN stack (MongoDB, Express.js, React.js, Node.js). Collaborating with the team on real-world features, API development, and database design while continuously sharpening backend and frontend skills.",
     responsibilities: [
@@ -179,6 +181,22 @@ export default function ExperiencePage() {
                                      transition-all duration-300"
                         >
                           <FiLinkedin size={18} />
+                        </a>
+                      )}
+
+                      {item.certificateLink && (
+                        <a
+                          href={item.certificateLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="relative z-20 flex items-center gap-2 px-3.5 py-2 rounded-xl
+                                     bg-cyan-500/10 border border-cyan-500/30
+                                     text-sm md:text-base font-semibold text-cyan-300
+                                     hover:bg-cyan-500/20 hover:border-cyan-500/50
+                                     transition-all duration-300"
+                        >
+                          Certificate
+                          <FiExternalLink size={15} />
                         </a>
                       )}
                     </div>
