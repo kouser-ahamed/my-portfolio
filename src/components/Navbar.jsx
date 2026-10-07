@@ -1423,7 +1423,7 @@ export default function Navbar() {
 
         {/* Desktop Resume Link */}
         <motion.a
-          href="https://drive.google.com/file/d/1xxupwdPETHo-NA4hVYtlz10-znilHhIi/view?usp=sharing"
+          href="https://drive.google.com/file/d/1CwuXL4olqbNAwt0e374oiqz03LxD4Hjz/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           initial={{
@@ -1551,7 +1551,7 @@ export default function Navbar() {
                   {/* Resume button pinned to the bottom of the drawer */}
                   <div className="border-t border-white/10 px-6 py-6">
                     <motion.a
-                      href="https://drive.google.com/file/d/1xxupwdPETHo-NA4hVYtlz10-znilHhIi/view?usp=sharing"
+                      href="https://drive.google.com/file/d/1CwuXL4olqbNAwt0e374oiqz03LxD4Hjz/view?usp=sharing"
                       target="_blank"
                       rel="noopener noreferrer"
                       whileHover={{ scale: 1.03 }}

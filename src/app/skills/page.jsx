@@ -292,7 +292,17 @@ import {
   SiMongodb,
   SiMysql,
   SiGit,
+  SiGithub,
   SiVercel,
+  SiStripe,
+  SiCloudinary,
+  SiZod,
+  SiRedux,
+  SiReactquery,
+  SiGoogle,
+  SiJsonwebtokens,
+  SiPostman,
+  SiPostgresql,
 } from "react-icons/si";
 import {
   FiLock,
@@ -303,13 +313,17 @@ import {
   FiZap,
   FiRefreshCw,
   FiGrid,
+  FiShield,
+  FiCode,
+  FiKey,
 } from "react-icons/fi";
+import { TbBrandOauth } from "react-icons/tb";
 
 const skillCategories = [
   {
     title: "Frontend Engineering",
     description:
-      "Building responsive, modern & high-performance interfaces.",
+      "Building responsive, high-performance & visually refined web interfaces.",
     gradient: "from-cyan-500/20 via-blue-500/10 to-transparent",
     borderColor: "group-hover:border-cyan-500/50",
     skills: [
@@ -326,16 +340,16 @@ const skillCategories = [
         bg: "bg-cyan-500/10",
       },
       {
-        name: "JavaScript",
-        icon: SiJavascript,
-        color: "text-yellow-400",
-        bg: "bg-yellow-500/10",
-      },
-      {
         name: "TypeScript",
         icon: SiTypescript,
         color: "text-blue-400",
         bg: "bg-blue-500/10",
+      },
+      {
+        name: "JavaScript (ES6+)",
+        icon: SiJavascript,
+        color: "text-yellow-400",
+        bg: "bg-yellow-500/10",
       },
       {
         name: "Tailwind CSS",
@@ -343,12 +357,30 @@ const skillCategories = [
         color: "text-teal-400",
         bg: "bg-teal-500/10",
       },
+      {
+        name: "HeroUI",
+        icon: FiLayers,
+        color: "text-pink-400",
+        bg: "bg-pink-500/10",
+      },
+      {
+        name: "Redux Toolkit",
+        icon: SiRedux,
+        color: "text-purple-400",
+        bg: "bg-purple-500/10",
+      },
+      {
+        name: "TanStack React Query",
+        icon: SiReactquery,
+        color: "text-rose-400",
+        bg: "bg-rose-500/10",
+      },
     ],
   },
   {
-    title: "Backend Systems",
+    title: "Backend & Systems",
     description:
-      "Scalable APIs, authentication & server-side architecture.",
+      "Scalable server architecture, robust RESTful APIs & business logic.",
     gradient: "from-emerald-500/20 via-green-500/10 to-transparent",
     borderColor: "group-hover:border-emerald-500/50",
     skills: [
@@ -365,88 +397,118 @@ const skillCategories = [
         bg: "bg-gray-500/10",
       },
       {
-        name: "Mongoose",
-        icon: FiDatabase,
-        color: "text-red-400",
-        bg: "bg-red-500/10",
-      },
-      {
         name: "REST APIs",
         icon: FiServer,
         color: "text-blue-400",
         bg: "bg-blue-500/10",
       },
       {
-        name: "Authentication",
-        icon: FiLock,
-        color: "text-purple-400",
-        bg: "bg-purple-500/10",
+        name: "Zod Validation",
+        icon: SiZod,
+        color: "text-indigo-400",
+        bg: "bg-indigo-500/10",
+      },
+      {
+        name: "Stripe Payments",
+        icon: SiStripe,
+        color: "text-indigo-300",
+        bg: "bg-indigo-500/10",
+      },
+      {
+        name: "Cloudinary CDN",
+        icon: SiCloudinary,
+        color: "text-sky-400",
+        bg: "bg-sky-500/10",
       },
     ],
   },
   {
-    title: "Database & Storage",
+    title: "Auth & Security",
     description:
-      "Optimized data architecture & seamless integrations.",
+      "Role-based access control, session tokens & secure federated auth.",
+    gradient: "from-purple-500/20 via-indigo-500/10 to-transparent",
+    borderColor: "group-hover:border-purple-500/50",
+    skills: [
+      {
+        name: "Better Auth",
+        icon: FiShield,
+        color: "text-purple-400",
+        bg: "bg-purple-500/10",
+      },
+      {
+        name: "JWT Authentication",
+        icon: SiJsonwebtokens,
+        color: "text-pink-400",
+        bg: "bg-pink-500/10",
+      },
+      {
+        name: "Google OAuth",
+        icon: SiGoogle,
+        color: "text-amber-400",
+        bg: "bg-amber-500/10",
+      },
+      {
+        name: "Role-Based Access (RBAC)",
+        icon: FiLock,
+        color: "text-cyan-400",
+        bg: "bg-cyan-500/10",
+      },
+      {
+        name: "HTTPOnly Cookies / CORS",
+        icon: TbBrandOauth,
+        color: "text-emerald-400",
+        bg: "bg-emerald-500/10",
+      },
+      {
+        name: "JOSE / JWKS Tokens",
+        icon: FiKey,
+        color: "text-teal-400",
+        bg: "bg-teal-500/10",
+      },
+    ],
+  },
+  {
+    title: "Database, Tools & DevOps",
+    description:
+      "Data modeling, version control, API testing & cloud deployments.",
     gradient: "from-orange-500/20 via-yellow-500/10 to-transparent",
     borderColor: "group-hover:border-orange-500/50",
     skills: [
       {
-        name: "MongoDB",
+        name: "MongoDB & Mongoose",
         icon: SiMongodb,
         color: "text-emerald-500",
         bg: "bg-emerald-500/10",
       },
       {
-        name: "MySQL",
-        icon: SiMysql,
-        color: "text-orange-500",
-        bg: "bg-orange-500/10",
+        name: "PostgreSQL & MySQL",
+        icon: SiPostgresql,
+        color: "text-sky-400",
+        bg: "bg-sky-500/10",
       },
-      {
-        name: "Database Design",
-        icon: FiDatabase,
-        color: "text-yellow-500",
-        bg: "bg-yellow-500/10",
-      },
-      {
-        name: "API Integration",
-        icon: FiLayers,
-        color: "text-cyan-500",
-        bg: "bg-cyan-500/10",
-      },
-    ],
-  },
-  {
-    title: "Tools & Workflow",
-    description:
-      "Modern tools powering intelligent digital products.",
-    gradient: "from-purple-500/20 via-pink-500/10 to-transparent",
-    borderColor: "group-hover:border-purple-500/50",
-    skills: [
       {
         name: "Git & GitHub",
-        icon: SiGit,
+        icon: SiGithub,
         color: "text-orange-500",
         bg: "bg-orange-500/10",
       },
       {
-        name: "Vercel",
+        name: "Vercel Deployment",
         icon: SiVercel,
         color: "text-white",
         bg: "bg-white/10",
       },
       {
-        name: "CI/CD",
+        name: "Postman API Testing",
+        icon: SiPostman,
+        color: "text-orange-400",
+        bg: "bg-orange-500/10",
+      },
+      {
+        name: "CI/CD & Modern Tools",
         icon: FiRefreshCw,
         color: "text-green-400",
         bg: "bg-green-500/10",
-      },
-      {
-        name: "AI Tools",
-        icon: FiCpu,
-        color: "text-purple-400",
-        bg: "bg-purple-500/10",
       },
     ],
   },
@@ -455,7 +517,7 @@ const skillCategories = [
 const stats = [
   {
     label: "Technologies",
-    value: "15+",
+    value: "20+",
     color: "from-emerald-400 to-green-600",
     icon: FiZap,
   },

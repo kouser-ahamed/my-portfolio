@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 
 const educationData = [
   {
-    year: "2022 – 2025",
+    year: "Jan 2022 – Jan 2026",
     gpa: "3.36 / 4.00",
     degree: "B.Sc. in Computer Science & Engineering",
     institution: "Daffodil International University",
@@ -122,12 +122,10 @@ export default function Education() {
                     initial={{
                       opacity: 0,
                       y: 30,
-                      // মোবাইল স্ক্রিনে শুধু নিচ থেকে উপরে আসবে (X-axis অ্যানিমেশন অফ রাখা হয়েছে ক্লিন লুকের জন্য)
-                      x: typeof window !== "undefined" && window.innerWidth < 768 ? 0 : (item.side === "right" ? 40 : -40),
                     }}
-                    whileInView={{ opacity: 1, y: 0, x: 0 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
                     className="relative p-4 md:p-6 rounded-2xl md:rounded-3xl bg-white/[0.03] border border-white/10 backdrop-blur-2xl transition-all duration-300 hover:border-emerald-500/40 hover:shadow-[0_25px_90px_rgba(16,185,129,0.15)] group overflow-hidden"
                   >
 

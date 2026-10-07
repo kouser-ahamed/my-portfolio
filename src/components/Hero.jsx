@@ -61,9 +61,24 @@ const techStack = [
     gradient: "from-zinc-500/20 to-zinc-600/5",
   },
   {
-    name: "REST APIs",
-    color: "text-cyan-400",
-    gradient: "from-cyan-500/20 to-cyan-600/5",
+    name: "Tailwind CSS",
+    color: "text-teal-400",
+    gradient: "from-teal-500/20 to-teal-600/5",
+  },
+  {
+    name: "Better Auth",
+    color: "text-purple-400",
+    gradient: "from-purple-500/20 to-purple-600/5",
+  },
+  {
+    name: "Stripe",
+    color: "text-indigo-400",
+    gradient: "from-indigo-500/20 to-indigo-600/5",
+  },
+  {
+    name: "Redux",
+    color: "text-violet-400",
+    gradient: "from-violet-500/20 to-violet-600/5",
   },
 ];
 
@@ -276,7 +291,7 @@ export default function Hero() {
             </MotionLink>
 
             <motion.a
-              href="https://drive.google.com/file/d/1xxupwdPETHo-NA4hVYtlz10-znilHhIi/view?usp=sharing"
+              href="https://drive.google.com/file/d/1CwuXL4olqbNAwt0e374oiqz03LxD4Hjz/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{
