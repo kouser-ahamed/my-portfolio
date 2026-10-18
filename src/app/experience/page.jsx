@@ -2,14 +2,34 @@
 
 import { motion } from "framer-motion";
 import { FiBriefcase, FiExternalLink, FiLinkedin, FiAward } from "react-icons/fi";
-import { SiPrisma, SiNestjs } from "react-icons/si";
+import { SiPrisma, SiNestjs, SiVuedotjs, SiNuxt, SiDocker } from "react-icons/si";
 import { cn } from "@/lib/utils";
 
-// NOTE: double-check the exact spelling of the company name below (CodeOnix)
-// before publishing — update it here if it's spelled differently.
 // Add more objects to this array whenever a new job is added — the timeline
 // below builds itself from this data, same pattern as the Education page.
 const experienceData = [
+  {
+    duration: "10 October 2026 – Present",
+    status: "Internship",
+    role: "Frontend Developer Intern",
+    company: "Next Page Technology Ltd",
+    companyLink: "https://nextpagetl.com",
+    linkedin: "https://www.linkedin.com/company/next-page-technology-ltd",
+    description:
+      "Working as a Frontend Developer Intern, contributing to real-world web applications and user interfaces. Collaborating with cross-functional teams to build responsive, performant, and user-friendly web features while expanding frontend engineering practices.",
+    responsibilities: [
+      "Assisting in the development, styling, and optimization of modern, responsive frontend interfaces.",
+      "Collaborating closely with team members on code reviews, debugging, and feature enhancements.",
+      "Writing clean, modular, and maintainable frontend code following company standards and best practices.",
+      "Integrating APIs and ensuring seamless cross-browser compatibility and UI performance.",
+    ],
+    currentlyLearning: [
+      { name: "Vue.js", Icon: SiVuedotjs, color: "text-emerald-400", bg: "bg-emerald-500/10" },
+      { name: "Nuxt.js", Icon: SiNuxt, color: "text-teal-400", bg: "bg-teal-500/10" },
+      { name: "Docker", Icon: SiDocker, color: "text-sky-400", bg: "bg-sky-500/10" },
+    ],
+    side: "right",
+  },
   {
     duration: "27 June 2026 – 26 September 2026",
     status: "Internship",
@@ -31,7 +51,7 @@ const experienceData = [
       { name: "Prisma ORM", Icon: SiPrisma, color: "text-teal-400", bg: "bg-teal-500/10" },
       { name: "NestJS", Icon: SiNestjs, color: "text-red-400", bg: "bg-red-500/10" },
     ],
-    side: "right",
+    side: "left",
   },
 ];
 
