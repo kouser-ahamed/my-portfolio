@@ -17,6 +17,13 @@ export const metadata = {
   title: "Kouser Ahamed | Full-Stack Web Developer & MERN Engineer",
   description:
     "Portfolio of Kouser Ahamed - Full-Stack Web Developer and MERN Stack Engineer specializing in Next.js, React, Node.js, TypeScript, and modern scalable architectures.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
