@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FiBriefcase, FiExternalLink, FiLinkedin, FiAward } from "react-icons/fi";
+import { FiBriefcase, FiExternalLink, FiLinkedin, FiAward, FiMapPin } from "react-icons/fi";
 import { SiPrisma, SiNestjs, SiVuedotjs, SiNuxt, SiDocker } from "react-icons/si";
 import { cn } from "@/lib/utils";
 
@@ -11,6 +11,8 @@ const experienceData = [
   {
     duration: "10 October 2026 – Present",
     status: "Internship",
+    workType: "On-Site",
+    location: "House 1/C 3rd Floor, Road-2, Sector-3, Uttara, Dhaka, Bangladesh",
     role: "Frontend Developer Intern",
     company: "Next Page Technology Ltd",
     companyLink: "https://nextpagetl.com",
@@ -33,6 +35,8 @@ const experienceData = [
   {
     duration: "27 June 2026 – 26 September 2026",
     status: "Internship",
+    workType: "Remote",
+    location: "Islamabad, Pakistan",
     role: "MERN Stack Developer (Intern)",
     company: "CodeOnix",
     companyLink: "https://www.codeonix.tech/portfolio",
@@ -147,7 +151,7 @@ export default function ExperiencePage() {
                                  bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/10 pointer-events-none"
                     />
 
-                    {/* META */}
+                    {/* META BADGES */}
                     <div className="flex flex-wrap items-center gap-2 mb-3">
                       <span className="px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[11px] md:text-xs bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-medium">
                         {item.duration}
@@ -160,6 +164,12 @@ export default function ExperiencePage() {
                         </span>
                         {item.status}
                       </span>
+
+                      {item.workType && (
+                        <span className="px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[11px] md:text-xs bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 font-medium">
+                          {item.workType}
+                        </span>
+                      )}
 
                       {item.joinDate && (
                         <span className="px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[11px] md:text-xs bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 font-medium">
@@ -174,7 +184,7 @@ export default function ExperiencePage() {
                     </h3>
 
                     {/* COMPANY + LINKS */}
-                    <div className="relative z-20 flex flex-wrap items-center gap-2.5 mt-2 mb-4">
+                    <div className="relative z-20 flex flex-wrap items-center gap-2.5 mt-2 mb-3">
                       <a
                         href={item.companyLink}
                         target="_blank"
@@ -220,6 +230,16 @@ export default function ExperiencePage() {
                         </a>
                       )}
                     </div>
+
+                    {/* LOCATION */}
+                    {item.location && (
+                      <div className="flex flex-wrap items-center mb-4">
+                        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 md:px-3 md:py-1 rounded-full text-[11px] md:text-xs bg-white/5 border border-white/10 text-gray-300">
+                          <FiMapPin className="text-emerald-400 text-[11px] md:text-xs shrink-0" />
+                          <span>{item.location}</span>
+                        </span>
+                      </div>
+                    )}
 
                     {/* DESCRIPTION */}
                     <p className="text-xs md:text-sm leading-relaxed text-gray-400 mb-4">
