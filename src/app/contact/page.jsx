@@ -88,8 +88,8 @@
 //                 <ContactItem
 //                   icon={<FiMail size={18} />}
 //                   label="Email"
-//                   value="kouserahamed.cse.diu@gmail.com"
-//                   href="mailto:kouserahamed.cse.diu@gmail.com"
+//                   value="kouserahamed.dev@gmail.com"
+//                   href="mailto:kouserahamed.dev@gmail.com"
 //                 />
 //                 <ContactItem
 //                   icon={<FiPhone size={18} />}
@@ -398,8 +398,8 @@
 //                 <ContactItem
 //                   icon={<FiMail size={18} />}
 //                   label="Email"
-//                   value="kouserahamed.cse.diu@gmail.com"
-//                   href="mailto:kouserahamed.cse.diu@gmail.com"
+//                   value="kouserahamed.dev@gmail.com"
+//                   href="mailto:kouserahamed.dev@gmail.com"
 //                 />
 //                 <ContactItem
 //                   icon={<FiPhone size={18} />}
@@ -762,8 +762,8 @@ export default function Contact() {
                 <ContactItem
                   icon={<FiMail size={18} />}
                   label="Email"
-                  value="kouserahamed.cse.diu@gmail.com"
-                  href="mailto:kouserahamed.cse.diu@gmail.com"
+                  value="kouserahamed.dev@gmail.com"
+                  href="mailto:kouserahamed.dev@gmail.com"
                 />
                 <ContactItem
                   icon={<FiPhone size={18} />}

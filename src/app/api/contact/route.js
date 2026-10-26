@@ -9,7 +9,7 @@ import nodemailer from "nodemailer";
 // 2. Create an "App Password": https://myaccount.google.com/apppasswords
 //    (choose "Mail" as the app) — Google gives you a 16-character password.
 // 3. In your project root, create a file named `.env.local` with:
-//      EMAIL_USER=kouserahamed.cse.diu@gmail.com
+//      EMAIL_USER=kouserahamed.dev@gmail.com
 //      EMAIL_PASS=your16characterapppassword
 //    (No quotes, no spaces around the =. Never commit .env.local to GitHub —
 //    it should already be in your .gitignore by default in Next.js.)
