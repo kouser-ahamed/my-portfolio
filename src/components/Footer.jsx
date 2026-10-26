@@ -90,7 +90,6 @@ import {
   FiTwitter,
   FiInstagram,
   FiArrowUp,
-  FiCode,
 } from "react-icons/fi";
 import { FaFacebookF } from "react-icons/fa";
 
@@ -186,7 +185,7 @@ export default function Footer() {
               }}
               className="mb-3 text-2xl font-bold sm:text-3xl"
             >
-              <span className="bg-gradient-to-r from-white via-gray-200 to-gray-500 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
                 Kouser
               </span>
 
@@ -316,23 +315,12 @@ export default function Footer() {
             © {new Date().getFullYear()} All Rights Reserved
           </p>
 
-          {/* Built With */}
-          <div className="flex flex-col items-center gap-2 sm:flex-row sm:gap-4">
-            <div className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-[0.14em] text-gray-600 sm:text-xs">
-              <FiCode className="text-cyan-500" />
-
-              <span>Built with Next.js</span>
-            </div>
-
-            <span className="hidden h-1 w-1 rounded-full bg-gray-700 sm:block" />
-
-            <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gray-600 sm:text-xs sm:tracking-[0.2em]">
-              Designed by{" "}
-              <span className="bg-gradient-to-r from-emerald-400 to-cyan-500 bg-clip-text font-semibold text-transparent">
-                Kouser
-              </span>
-            </p>
-          </div>
+          <p className="text-[11px] font-medium uppercase tracking-[0.16em] text-gray-600 sm:text-xs sm:tracking-[0.2em]">
+            Designed by{" "}
+            <span className="bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 bg-clip-text font-semibold text-transparent">
+              Kouser
+            </span>
+          </p>
         </div>
       </div>
     </footer>
